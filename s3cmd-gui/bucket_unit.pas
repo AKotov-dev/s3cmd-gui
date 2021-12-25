@@ -54,6 +54,8 @@ begin
     cmd := 's3cmd mb s3://' + Edit1.Text + '; s3cmd setacl s3://' +
       Edit1.Text + '/  --acl-private';
 
+  left_panel := False;
+
   MainForm.StartCmd;
 end;
 

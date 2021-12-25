@@ -3,6 +3,7 @@ object BucketForm: TBucketForm
   Height = 100
   Top = 269
   Width = 457
+  ActiveControl = Edit1
   Caption = 'Create a new bucket'
   ClientHeight = 100
   ClientWidth = 457

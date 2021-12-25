@@ -60,6 +60,8 @@ begin
     S.Add('host_bucket =' + Edit5.Text);
 
     S.SaveToFile(GetUserDir + '.s3cfg');
+    left_panel:=false;
+
     MainForm.ReadS3Root;
   finally
     S.Free;
