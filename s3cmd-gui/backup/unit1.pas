@@ -371,6 +371,8 @@ var
   i: integer;
   c: string; //сборка команд...
 begin
+  if SDBox.Count = 0 then Exit;
+
   //Команда в поток
   cmd := '';
   c := '';
@@ -451,6 +453,7 @@ end;
 
 procedure TMainForm.FormShow(Sender: TObject);
 begin
+  MainForm.Caption := Application.Title;
   IniPropStorage1.Restore;
   //Проверяем подключение выводим ошибки в SDMemo
   MainForm.CheckConnect;

@@ -371,6 +371,9 @@ var
   i: integer;
   c: string; //сборка команд...
 begin
+  if SDBox.Count = 0 then
+    Exit;
+
   //Команда в поток
   cmd := '';
   c := '';
