@@ -79,7 +79,7 @@ msgstr ""
 
 #: tmainform.addbtn.hint
 msgctxt "tmainform.addbtn.hint"
-msgid "Create New Bucket"
+msgid "Create new bucket"
 msgstr "Создать новый бакет"
 
 #: tmainform.caption
@@ -87,11 +87,11 @@ msgid "s3cmd-gui v0.1"
 msgstr ""
 
 #: tmainform.copyfrompc.hint
-msgid "Copy to Bucket"
+msgid "Copy to bucket"
 msgstr "Копировать в бакет"
 
 #: tmainform.copyfromsmartphone.hint
-msgid "Copy to Computer"
+msgid "Copy to computer"
 msgstr "Копировать на компьютер"
 
 #: tmainform.delbtn.hint
@@ -114,7 +114,7 @@ msgstr "О программе"
 
 #: tmainform.mkpcdirbtn.hint
 msgctxt "tmainform.mkpcdirbtn.hint"
-msgid "Create New Folder"
+msgid "Create new folder"
 msgstr "Создать новый каталог"
 
 #: tmainform.panel1.caption
@@ -130,7 +130,7 @@ msgid "Update"
 msgstr "Обновить"
 
 #: tmainform.selectallbtn.hint
-msgid "Select All (not buckets)"
+msgid "Select all (not buckets)"
 msgstr "Выбрать все (не бакеты)"
 
 #: tmainform.settingsbtn.hint
@@ -139,7 +139,7 @@ msgid "Connection Settings"
 msgstr "Настройки подключения"
 
 #: tmainform.upbtn.hint
-msgid "Upper Level"
+msgid "Upper level"
 msgstr "Верхний уровень"
 
 #: unit1.scancelcopyng

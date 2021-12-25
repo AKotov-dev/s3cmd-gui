@@ -71,7 +71,7 @@ msgstr ""
 
 #: tmainform.addbtn.hint
 msgctxt "tmainform.addbtn.hint"
-msgid "Create New Bucket"
+msgid "Create new bucket"
 msgstr ""
 
 #: tmainform.caption
@@ -79,11 +79,11 @@ msgid "s3cmd-gui v0.1"
 msgstr ""
 
 #: tmainform.copyfrompc.hint
-msgid "Copy to Bucket"
+msgid "Copy to bucket"
 msgstr ""
 
 #: tmainform.copyfromsmartphone.hint
-msgid "Copy to Computer"
+msgid "Copy to computer"
 msgstr ""
 
 #: tmainform.delbtn.hint
@@ -106,7 +106,7 @@ msgstr ""
 
 #: tmainform.mkpcdirbtn.hint
 msgctxt "tmainform.mkpcdirbtn.hint"
-msgid "Create New Folder"
+msgid "Create new folder"
 msgstr ""
 
 #: tmainform.panel1.caption
@@ -122,7 +122,7 @@ msgid "Update"
 msgstr ""
 
 #: tmainform.selectallbtn.hint
-msgid "Select All (not buckets)"
+msgid "Select all (not buckets)"
 msgstr ""
 
 #: tmainform.settingsbtn.hint
@@ -131,7 +131,7 @@ msgid "Connection Settings"
 msgstr ""
 
 #: tmainform.upbtn.hint
-msgid "Upper Level"
+msgid "Upper level"
 msgstr ""
 
 #: unit1.scancelcopyng

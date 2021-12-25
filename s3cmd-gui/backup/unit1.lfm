@@ -844,7 +844,7 @@ object MainForm: TMainForm
       object DelBtn: TSpeedButton
         Left = 185
         Height = 40
-        Hint = 'Delete Bucket/Files/Folders '
+        Hint = 'Delete Bucket/Files/Folders'
         Top = 8
         Width = 40
         Flat = True
