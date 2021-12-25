@@ -331,7 +331,7 @@ begin
   cmd := '';
 
   //Если выбрано и выбран не корень
-  if (CompDir.Items.SelectionCount <> 0) and (not CompDir.Items.Item[0].Selected) then
+  if (CompDir.Items.SelectionCount <> 0) and (not CompDir.Items.Item[0].Selected) and (GroupBox2.Caption <> 's3://') then
   begin
     for i := 0 to CompDir.Items.Count - 1 do
     begin
