@@ -130,15 +130,16 @@ procedure TMainForm.UpBtnClick(Sender: TObject);
 var
   i: integer;
 begin
-  if GroupBox2.Caption = 's3://' then
-    exit;
+  if GroupBox2.Caption <> 's3://' then
 
-  for i := Length(GroupBox2.Caption) - 1 downto 1 do
-    if GroupBox2.Caption[i] = '/' then
-    begin
-      GroupBox2.Caption := Copy(GroupBox2.Caption, 1, i);
-      break;
-    end;
+  begin
+    for i := Length(GroupBox2.Caption) - 1 downto 1 do
+      if GroupBox2.Caption[i] = '/' then
+      begin
+        GroupBox2.Caption := Copy(GroupBox2.Caption, 1, i);
+        break;
+      end;
+  end;
 
   StartLS;
 end;

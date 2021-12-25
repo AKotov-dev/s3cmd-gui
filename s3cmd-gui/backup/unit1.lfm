@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 289
+  Left = 395
   Height = 672
-  Top = 124
+  Top = 235
   Width = 1005
   ActiveControl = Splitter2
   Caption = 's3cmd-gui v0.1'
@@ -80,7 +80,7 @@ object MainForm: TMainForm
       object CopyFromPC: TSpeedButton
         Left = 8
         Height = 40
-        Hint = 'Copy to Bucket'
+        Hint = 'Copy to bucket'
         Top = 8
         Width = 40
         Flat = True
@@ -223,7 +223,7 @@ object MainForm: TMainForm
       object MkPCDirBtn: TSpeedButton
         Left = 56
         Height = 40
-        Hint = 'Create New Folder'
+        Hint = 'Create new folder'
         Top = 8
         Width = 40
         Flat = True
@@ -558,7 +558,7 @@ object MainForm: TMainForm
       object CopyFromSmartphone: TSpeedButton
         Left = 8
         Height = 40
-        Hint = 'Copy to Computer'
+        Hint = 'Copy to computer'
         Top = 8
         Width = 40
         Flat = True
@@ -701,7 +701,7 @@ object MainForm: TMainForm
       object SelectAllBtn: TSpeedButton
         Left = 96
         Height = 40
-        Hint = 'Select All (not buckets)'
+        Hint = 'Select all (not buckets)'
         Top = 8
         Width = 40
         Flat = True
@@ -987,7 +987,7 @@ object MainForm: TMainForm
       object UpBtn: TSpeedButton
         Left = 52
         Height = 40
-        Hint = 'Upper Level'
+        Hint = 'Upper level'
         Top = 8
         Width = 40
         Flat = True
@@ -1277,7 +1277,7 @@ object MainForm: TMainForm
       object AddBtn: TSpeedButton
         Left = 142
         Height = 40
-        Hint = 'Create New Bucket'
+        Hint = 'Create new bucket'
         Top = 8
         Width = 40
         Flat = True
@@ -1572,6 +1572,9 @@ object MainForm: TMainForm
     Width = 5
   end
   object Panel1: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideBottom.Control = Owner
     Left = 0
     Height = 76
     Top = 596
@@ -1600,6 +1603,8 @@ object MainForm: TMainForm
     end
     object ProgressBar1: TProgressBar
       AnchorSideTop.Control = SDMemo
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
       Left = 0
       Height = 12
       Top = 64

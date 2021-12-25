@@ -49,9 +49,10 @@ begin
     ExProcess.Parameters.Add('-c');
 
     //Выводим ошибки подключения в SDMemo
-    ExProcess.Options := [poUsePipes, poStderrToOutPut];
+    ExProcess.Options := [poWaitOnExit, poUsePipes, poStderrToOutPut];
     ExProcess.Parameters.Add('s3cmd ls >/dev/null');
     ExProcess.Execute;
+
     S.LoadFromStream(ExProcess.Output);
     Synchronize(@UpdateSDMemo);
 

@@ -1,5 +1,5 @@
 object MainForm: TMainForm
-  Left = 289
+  Left = 293
   Height = 672
   Top = 124
   Width = 1005
@@ -1572,6 +1572,9 @@ object MainForm: TMainForm
     Width = 5
   end
   object Panel1: TPanel
+    AnchorSideLeft.Control = Owner
+    AnchorSideRight.Control = Owner
+    AnchorSideBottom.Control = Owner
     Left = 0
     Height = 76
     Top = 596
@@ -1600,6 +1603,8 @@ object MainForm: TMainForm
     end
     object ProgressBar1: TProgressBar
       AnchorSideTop.Control = SDMemo
+      AnchorSideBottom.Control = Panel1
+      AnchorSideBottom.Side = asrBottom
       Left = 0
       Height = 12
       Top = 64

@@ -20,7 +20,6 @@ type
     Edit3: TEdit;
     Edit4: TEdit;
     Edit5: TEdit;
-    IniPropStorage1: TIniPropStorage;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -28,7 +27,7 @@ type
     Label5: TLabel;
     procedure BitBtn1Click(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
-    procedure FormCreate(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
 
   public
@@ -50,6 +49,7 @@ procedure TConfigForm.BitBtn1Click(Sender: TObject);
 var
   S: TStringList;
 begin
+  left_panel := False;
   try
     S := TStringList.Create;
     S.Add('[default]');
@@ -60,7 +60,6 @@ begin
     S.Add('host_bucket =' + Edit5.Text);
 
     S.SaveToFile(GetUserDir + '.s3cfg');
-    left_panel:=false;
 
     //Проверяем подключение выводим ошибки в SDMemo
     MainForm.CheckConnect;
@@ -74,11 +73,32 @@ end;
 procedure TConfigForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   CloseAction := caFree;
+
+  //Если Ok = сохраняем настройки
+  if ModalResult = mrOk then
+    with MainForm.IniPropStorage1 do
+    begin
+      //    IniSection := 's3cmd'; //указываем секцию
+      WriteString('access_key', Edit1.Text);
+      WriteString('secret_key', Edit2.Text);
+      WriteString('bucket_location', Edit3.Text);
+      WriteString('host_base', Edit4.Text);
+      WriteString('host_bucket', Edit5.Text);
+    end;
 end;
 
-procedure TConfigForm.FormCreate(Sender: TObject);
+//Чтение параметров s3cmd
+procedure TConfigForm.FormShow(Sender: TObject);
 begin
-  IniPropStorage1.IniFileName := MainForm.IniPropStorage1.IniFileName;
+  with MainForm.IniPropStorage1 do
+  begin
+    // IniSection := 's3cmd'; //указываем секцию
+    Edit1.Text := ReadString('access_key', '');
+    Edit2.Text := ReadString('secret_key', '');
+    Edit3.Text := ReadString('bucket_location', '');
+    Edit4.Text := ReadString('host_base', '');
+    Edit5.Text := ReadString('host_bucket', '');
+  end;
 end;
 
 end.

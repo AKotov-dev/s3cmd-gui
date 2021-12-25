@@ -60,7 +60,7 @@ begin
       //Выводим лог
       Log.Text := Trim(Log.Text);
 
-    //  sleep(100);
+      //  sleep(100);
       if Log.Count <> 0 then
         Synchronize(@ShowLog);
     end;
@@ -81,7 +81,7 @@ begin
   with MainForm do
   begin
     SDMemo.Clear;
-        //Метка отмены копирования
+    //Метка отмены копирования
     Panel4.Caption := SCancelCopyng;
     ProgressBar1.Style := pbstMarquee;
     ProgressBar1.Visible := True;
@@ -94,7 +94,7 @@ procedure StartS3Command.StopProgress;
 begin
   with MainForm do
   begin
-        //Метка отмены копирования
+    //Метка отмены копирования
     Panel4.Caption := '';
     ProgressBar1.Visible := False;
     ProgressBar1.Style := pbstNormal;
@@ -120,7 +120,7 @@ begin
     MainForm.SDMemo.Lines.Append(Log[i]);
 
   //Вывод пачками
-//  MainForm.SDMemo.Lines.Assign(Result);
+  //  MainForm.SDMemo.Lines.Assign(Result);
 end;
 
 end.

@@ -1,15 +1,14 @@
 object ConfigForm: TConfigForm
-  Left = 292
+  Left = 351
   Height = 247
-  Top = 124
+  Top = 132
   Width = 548
   Caption = 'Configuration'
   ClientHeight = 247
   ClientWidth = 548
   OnClose = FormClose
-  OnCreate = FormCreate
+  OnShow = FormShow
   Position = poMainFormCenter
-  SessionProperties = 'Edit1.Text;Edit2.Text;Edit3.Text;Edit4.Text;Edit5.Text'
   LCLVersion = '2.0.10.0'
   object Label1: TLabel
     AnchorSideTop.Control = Edit1
@@ -159,10 +158,5 @@ object ConfigForm: TConfigForm
     Kind = bkClose
     ModalResult = 11
     TabOrder = 6
-  end
-  object IniPropStorage1: TIniPropStorage
-    StoredValues = <>
-    Left = 184
-    Top = 192
   end
 end

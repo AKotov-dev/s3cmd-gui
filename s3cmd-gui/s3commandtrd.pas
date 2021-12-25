@@ -84,7 +84,7 @@ begin
     //Метка отмены копирования
     Panel4.Caption := SCancelCopyng;
     ProgressBar1.Style := pbstMarquee;
-    ProgressBar1.Visible := True;
+    //  ProgressBar1.Visible := True;
     ProgressBar1.Refresh;
   end;
 end;
@@ -96,7 +96,7 @@ begin
   begin
     //Метка отмены копирования
     Panel4.Caption := '';
-    ProgressBar1.Visible := False;
+    //   ProgressBar1.Visible := False;
     ProgressBar1.Style := pbstNormal;
     ProgressBar1.Refresh;
 
