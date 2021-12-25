@@ -58,9 +58,10 @@
         <Filename Value="lsfoldertrd.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="LSFolderTRD"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <TopLine Value="42"/>
-        <CursorPos X="27" Y="52"/>
+        <CursorPos X="53" Y="50"/>
         <UsageCount Value="39"/>
         <Loaded Value="True"/>
       </Unit2>
@@ -80,7 +81,6 @@
         <ComponentName Value="ConfigForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
         <TopLine Value="48"/>
         <CursorPos X="3" Y="52"/>
