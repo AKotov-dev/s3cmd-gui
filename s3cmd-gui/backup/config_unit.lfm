@@ -1,14 +1,15 @@
 object ConfigForm: TConfigForm
   Left = 437
-  Height = 253
+  Height = 247
   Top = 145
   Width = 548
   Caption = 'Configuration'
-  ClientHeight = 253
+  ClientHeight = 247
   ClientWidth = 548
   OnClose = FormClose
   OnCreate = FormCreate
   Position = poMainFormCenter
+  SessionProperties = 'Edit1.Text;Edit2.Text;Edit3.Text;Edit4.Text;Edit5.Text'
   LCLVersion = '2.0.10.0'
   object Label1: TLabel
     AnchorSideTop.Control = Edit1
@@ -33,7 +34,6 @@ object ConfigForm: TConfigForm
     BorderSpacing.Left = 5
     BorderSpacing.Right = 8
     TabOrder = 0
-    Text = '9mXKxUgsPOAC_WhB3-c1'
   end
   object Label2: TLabel
     AnchorSideTop.Control = Edit2
@@ -58,7 +58,6 @@ object ConfigForm: TConfigForm
     BorderSpacing.Left = 5
     BorderSpacing.Right = 8
     TabOrder = 1
-    Text = 'ccAO8oEwJ1Jui-ePEGwFIH6W_SSVBCJpE2HPv7OH'
   end
   object Label3: TLabel
     AnchorSideTop.Control = Edit3
@@ -83,7 +82,6 @@ object ConfigForm: TConfigForm
     BorderSpacing.Left = 5
     BorderSpacing.Right = 8
     TabOrder = 2
-    Text = 'ru-central1'
   end
   object Label4: TLabel
     AnchorSideTop.Control = Edit4
@@ -108,7 +106,6 @@ object ConfigForm: TConfigForm
     BorderSpacing.Left = 5
     BorderSpacing.Right = 8
     TabOrder = 3
-    Text = 'storage.yandexcloud.net'
   end
   object Label5: TLabel
     AnchorSideTop.Control = Edit5
@@ -133,13 +130,12 @@ object ConfigForm: TConfigForm
     BorderSpacing.Left = 5
     BorderSpacing.Right = 8
     TabOrder = 4
-    Text = '%(bucket)s.storage.yandexcloud.net'
   end
   object BitBtn1: TBitBtn
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 430
-    Height = 38
+    Height = 35
     Top = 208
     Width = 110
     Anchors = [akTop, akRight]
@@ -154,7 +150,7 @@ object ConfigForm: TConfigForm
   object BitBtn2: TBitBtn
     AnchorSideRight.Control = BitBtn1
     Left = 318
-    Height = 38
+    Height = 35
     Top = 208
     Width = 110
     Anchors = [akTop, akRight]
@@ -166,7 +162,7 @@ object ConfigForm: TConfigForm
   end
   object IniPropStorage1: TIniPropStorage
     StoredValues = <>
-    Left = 176
-    Top = 200
+    Left = 184
+    Top = 192
   end
 end

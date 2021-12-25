@@ -1,10 +1,10 @@
 object ConfigForm: TConfigForm
   Left = 437
-  Height = 253
+  Height = 247
   Top = 145
   Width = 548
   Caption = 'Configuration'
-  ClientHeight = 253
+  ClientHeight = 247
   ClientWidth = 548
   OnClose = FormClose
   OnCreate = FormCreate
@@ -135,7 +135,7 @@ object ConfigForm: TConfigForm
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 430
-    Height = 38
+    Height = 35
     Top = 208
     Width = 110
     Anchors = [akTop, akRight]
@@ -150,7 +150,7 @@ object ConfigForm: TConfigForm
   object BitBtn2: TBitBtn
     AnchorSideRight.Control = BitBtn1
     Left = 318
-    Height = 38
+    Height = 35
     Top = 208
     Width = 110
     Anchors = [akTop, akRight]
@@ -162,7 +162,7 @@ object ConfigForm: TConfigForm
   end
   object IniPropStorage1: TIniPropStorage
     StoredValues = <>
-    Left = 176
-    Top = 200
+    Left = 184
+    Top = 192
   end
 end

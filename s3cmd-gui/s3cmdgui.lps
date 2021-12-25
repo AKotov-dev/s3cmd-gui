@@ -48,9 +48,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="284"/>
-        <CursorPos X="14" Y="287"/>
+        <EditorIndex Value="4"/>
+        <TopLine Value="396"/>
+        <CursorPos Y="406"/>
         <UsageCount Value="34"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -59,9 +59,11 @@
         <Filename Value="lsfoldertrd.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="LSFolderTRD"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="56" Y="3"/>
+        <EditorIndex Value="2"/>
+        <TopLine Value="67"/>
+        <CursorPos Y="88"/>
         <UsageCount Value="34"/>
+        <Loaded Value="True"/>
       </Unit2>
       <Unit3>
         <Filename Value="s3commandtrd.pas"/>
@@ -77,10 +79,12 @@
         <ComponentName Value="ConfigForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="47"/>
-        <CursorPos X="3" Y="53"/>
+        <CursorPos X="71" Y="76"/>
         <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="bucket_unit.pas"/>
@@ -88,10 +92,13 @@
         <ComponentName Value="BucketForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
         <TopLine Value="33"/>
         <CursorPos X="8" Y="62"/>
         <UsageCount Value="25"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="about_unit.pas"/>
@@ -99,7 +106,6 @@
         <ComponentName Value="AboutForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <TopLine Value="18"/>
         <CursorPos X="56" Y="46"/>
         <UsageCount Value="21"/>
@@ -129,7 +135,7 @@
         <UsageCount Value="10"/>
       </Unit9>
     </Units>
-    <JumpHistory Count="5" HistoryIndex="4">
+    <JumpHistory Count="7" HistoryIndex="6">
       <Position1>
         <Filename Value="about_unit.pas"/>
         <Caret Line="34" Column="25" TopLine="4"/>
@@ -150,6 +156,14 @@
         <Filename Value="about_unit.pas"/>
         <Caret Line="46" Column="53" TopLine="18"/>
       </Position5>
+      <Position6>
+        <Filename Value="lsfoldertrd.pas"/>
+        <Caret Line="88" Column="19" TopLine="72"/>
+      </Position6>
+      <Position7>
+        <Filename Value="lsfoldertrd.pas"/>
+        <Caret Line="8" Column="62"/>
+      </Position7>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

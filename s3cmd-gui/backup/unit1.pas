@@ -402,8 +402,7 @@ begin
         'echo -e "#!/bin/bash\n" > ~/.s3cmd-gui/444;' +
         'paste ~/.s3cmd-gui/222 ~/.s3cmd-gui/333 >> ~/.s3cmd-gui/444;' +
         'sed -i "/s3/s/^/s3cmd abortmp /" ~/.s3cmd-gui/444; chmod +x ~/.s3cmd-gui/444; sh ~/.s3cmd-gui/444;'
-        +
-        's3cmd rb --recursive --force ' + SDBox.Items.Strings[SDBox.ItemIndex];
+        + 's3cmd rb --recursive --force ' + SDBox.Items.Strings[SDBox.ItemIndex];
 
       StartCmd;
     end;

@@ -1,12 +1,12 @@
 object MainForm: TMainForm
-  Left = 629
-  Height = 636
-  Top = 234
-  Width = 852
+  Left = 290
+  Height = 672
+  Top = 123
+  Width = 1005
   ActiveControl = Splitter2
   Caption = 's3cmd-gui v0.1'
-  ClientHeight = 636
-  ClientWidth = 852
+  ClientHeight = 672
+  ClientWidth = 1005
   KeyPreview = True
   OnCreate = FormCreate
   OnKeyUp = FormKeyUp
@@ -24,14 +24,14 @@ object MainForm: TMainForm
   end
   object GroupBox1: TGroupBox
     Left = 0
-    Height = 550
+    Height = 586
     Top = 5
-    Width = 432
+    Width = 500
     Align = alLeft
     BorderSpacing.Top = 5
     Caption = 'computer'
-    ClientHeight = 532
-    ClientWidth = 430
+    ClientHeight = 568
+    ClientWidth = 498
     Font.Height = -13
     Font.Name = 'Sans'
     Font.Style = [fsBold]
@@ -39,9 +39,9 @@ object MainForm: TMainForm
     TabOrder = 1
     object CompDir: TShellTreeView
       Left = 0
-      Height = 476
+      Height = 512
       Top = 56
-      Width = 430
+      Width = 498
       Align = alClient
       AutoExpand = True
       BorderStyle = bsNone
@@ -67,12 +67,12 @@ object MainForm: TMainForm
       Left = 0
       Height = 56
       Top = 0
-      Width = 430
+      Width = 498
       Align = alTop
       Alignment = taRightJustify
       BevelOuter = bvNone
       ClientHeight = 56
-      ClientWidth = 430
+      ClientWidth = 498
       Font.Height = -13
       Font.Name = 'Sans'
       ParentFont = False
@@ -509,15 +509,15 @@ object MainForm: TMainForm
     end
   end
   object GroupBox2: TGroupBox
-    Left = 437
-    Height = 550
+    Left = 505
+    Height = 586
     Top = 5
-    Width = 415
+    Width = 500
     Align = alClient
     BorderSpacing.Top = 5
     Caption = 's3://'
-    ClientHeight = 532
-    ClientWidth = 413
+    ClientHeight = 568
+    ClientWidth = 498
     Font.Height = -13
     Font.Name = 'Sans'
     Font.Style = [fsBold]
@@ -525,9 +525,9 @@ object MainForm: TMainForm
     TabOrder = 2
     object SDBox: TListBox
       Left = 0
-      Height = 476
+      Height = 512
       Top = 56
-      Width = 413
+      Width = 498
       Align = alClient
       BorderStyle = bsNone
       Font.Height = -13
@@ -536,7 +536,7 @@ object MainForm: TMainForm
       OnDblClick = SDBoxDblClick
       OnDrawItem = SDBoxDrawItem
       ParentFont = False
-      ScrollWidth = 413
+      ScrollWidth = 498
       Style = lbOwnerDrawFixed
       TabOrder = 0
       TopIndex = -1
@@ -545,12 +545,12 @@ object MainForm: TMainForm
       Left = 0
       Height = 56
       Top = 0
-      Width = 413
+      Width = 498
       Align = alTop
       Alignment = taLeftJustify
       BevelOuter = bvNone
       ClientHeight = 56
-      ClientWidth = 413
+      ClientWidth = 498
       Font.Height = -13
       Font.Name = 'Sans'
       ParentFont = False
@@ -1130,7 +1130,7 @@ object MainForm: TMainForm
       object SettingsBtn: TSpeedButton
         AnchorSideRight.Control = Panel3
         AnchorSideRight.Side = asrBottom
-        Left = 363
+        Left = 448
         Height = 40
         Hint = 'Connection Settings'
         Top = 8
@@ -1419,7 +1419,7 @@ object MainForm: TMainForm
       end
       object InfoBtn: TSpeedButton
         AnchorSideRight.Control = SettingsBtn
-        Left = 319
+        Left = 404
         Height = 40
         Hint = 'Connection Settings'
         Top = 8
@@ -1566,21 +1566,21 @@ object MainForm: TMainForm
     end
   end
   object Splitter2: TSplitter
-    Left = 432
-    Height = 555
+    Left = 500
+    Height = 591
     Top = 0
     Width = 5
   end
   object Panel1: TPanel
     Left = 0
     Height = 76
-    Top = 560
-    Width = 852
+    Top = 596
+    Width = 1005
     Align = alBottom
     BevelOuter = bvNone
     Caption = 'Panel1'
     ClientHeight = 76
-    ClientWidth = 852
+    ClientWidth = 1005
     TabOrder = 4
     object SDMemo: TMemo
       AnchorSideTop.Control = Panel1
@@ -1588,7 +1588,7 @@ object MainForm: TMainForm
       Left = 2
       Height = 64
       Top = 0
-      Width = 850
+      Width = 1003
       Anchors = [akTop, akLeft, akRight, akBottom]
       BorderStyle = bsNone
       Font.Height = -12
@@ -1603,7 +1603,7 @@ object MainForm: TMainForm
       Left = 0
       Height = 12
       Top = 64
-      Width = 852
+      Width = 1005
       Align = alBottom
       TabOrder = 1
     end
@@ -1612,8 +1612,8 @@ object MainForm: TMainForm
     Cursor = crVSplit
     Left = 0
     Height = 5
-    Top = 555
-    Width = 852
+    Top = 591
+    Width = 1005
     Align = alBottom
     ResizeAnchor = akBottom
   end

@@ -5,7 +5,7 @@ unit LSFolderTRD;
 interface
 
 uses
-  Classes, Process, SysUtils, Forms, Controls;
+  Classes, Process, SysUtils, Forms, Controls, Dialogs;
 
 type
   StartLSFolder = class(TThread)

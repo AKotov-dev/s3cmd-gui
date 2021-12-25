@@ -5,7 +5,7 @@ unit LSFolderTRD;
 interface
 
 uses
-  Classes, Process, SysUtils, Forms, Controls;
+  Classes, Process, SysUtils, Forms, Controls, Dialogs;
 
 type
   StartLSFolder = class(TThread)
@@ -55,9 +55,11 @@ begin
 
     //ls текущего каталога с заменой спецсимволов
     if MainForm.GroupBox2.Caption = 's3://' then
-      ExProcess.Parameters.Add('s3cmd ls | cut -d " " -f4') else
-      ExProcess.Parameters.Add('s3cmd ls ' + MainForm.GroupBox2.Caption + ' | cut -b' +
-        IntToStr(Length(MainForm.GroupBox2.Caption) + 32) + '- | grep -v "^$"');
+      ExProcess.Parameters.Add('s3cmd ls | cut -d " " -f4')
+    else
+      ExProcess.Parameters.Add('s3cmd ls ' + MainForm.GroupBox2.Caption +
+        ' | cut -b' + IntToStr(Length(MainForm.GroupBox2.Caption) + 32) +
+        '- | grep -v "^$"');
 
     ExProcess.Execute;
     S.LoadFromStream(ExProcess.Output);
@@ -83,27 +85,32 @@ begin
   //Очищаем команду для корректного "Esc"
   lscmd := '';
   Screen.cursor := crDefault;
+  showmessage('111');
 end;
 
 { БЛОК ВЫВОДА LS в SDBox }
 procedure StartLSFolder.UpdateSDBox;
 begin
-  //Вывод обновленного списка
-  MainForm.SDBox.Items.Assign(S);
-  //Апдейт содержимого
-  MainForm.SDBox.Refresh;
+  with MainForm do
+  begin
+    //Вывод обновленного списка
+    SDBox.Items.Assign(S);
+    //Апдейт содержимого
+    SDBox.Refresh;
 
-  //Фокусируем
-  MainForm.SDBox.SetFocus;
+    //Фокусируем
+    SDBox.SetFocus;
 
-  //Если список не пуст - курсор в "0"
-  if MainForm.SDBox.Count <> 0 then
-    MainForm.SDBox.ItemIndex := 0;
+    //Если список не пуст - курсор в "0"
+    if SDBox.Count <> 0 then
+      SDBox.ItemIndex := 0;
 
-        if MainForm.GroupBox2.Caption = 's3://' then
-      MainForm.SDBox.MultiSelect:=False
+    //Если в корне - мультиселект отключен (можно выделить только 1 бакет)
+    if GroupBox2.Caption = 's3://' then
+      SDBox.MultiSelect := False
     else
-    MainForm.SDBox.MultiSelect:=True;
+      SDBox.MultiSelect := True;
+  end;
 end;
 
 end.

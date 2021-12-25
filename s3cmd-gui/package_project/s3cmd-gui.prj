@@ -25,7 +25,7 @@ vendor=alex_q_2000 (C) 2021
 summary=GUI for Command Line S3 Client (Amazon)
 
 [URLCOPY]
-urlcopy=11
+urlcopy=https://github.com/AKotov-dev/s3cmd-gui
 
 [LICENSE]
 license=GPLv3
@@ -53,7 +53,7 @@ deb=1
 4=/usr/share/doc/s3cmd-gui/
 
 [URL32]
-url32=1
+url32=https://github.com/AKotov-dev/s3cmd-gui
 
 [URL64]
 url64=
@@ -66,3 +66,6 @@ devtool=Lazarus
 
 [TOOLVERSION]
 toolversion=2.0.10
+
+[INFO]
+0=GUI for Command Line S3 Client (Amazon)

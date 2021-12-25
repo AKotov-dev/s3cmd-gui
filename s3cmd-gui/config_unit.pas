@@ -73,7 +73,7 @@ end;
 
 procedure TConfigForm.FormCreate(Sender: TObject);
 begin
-  IniPropStorage1.IniFileName:=MainForm.IniPropStorage1.IniFileName;
+  IniPropStorage1.IniFileName := MainForm.IniPropStorage1.IniFileName;
 end;
 
 end.

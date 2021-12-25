@@ -1,10 +1,10 @@
 object BucketForm: TBucketForm
-  Left = 288
-  Height = 103
-  Top = 127
+  Left = 380
+  Height = 100
+  Top = 269
   Width = 457
-  Caption = 'Create new bucket'
-  ClientHeight = 103
+  Caption = 'Create a new bucket'
+  ClientHeight = 100
   ClientWidth = 457
   OnClose = FormClose
   OnShow = FormShow
@@ -48,7 +48,7 @@ object BucketForm: TBucketForm
   object BitBtn2: TBitBtn
     AnchorSideRight.Control = BitBtn1
     Left = 227
-    Height = 38
+    Height = 35
     Top = 56
     Width = 110
     Anchors = [akTop, akRight]
@@ -62,7 +62,7 @@ object BucketForm: TBucketForm
     AnchorSideRight.Control = CheckBox1
     AnchorSideRight.Side = asrBottom
     Left = 339
-    Height = 38
+    Height = 35
     Top = 56
     Width = 110
     Anchors = [akTop, akRight]

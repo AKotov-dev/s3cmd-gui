@@ -1,10 +1,10 @@
 object AboutForm: TAboutForm
   Left = 322
-  Height = 247
+  Height = 248
   Top = 130
   Width = 442
   Caption = 'About'
-  ClientHeight = 247
+  ClientHeight = 248
   ClientWidth = 442
   OnClose = FormClose
   OnShow = FormShow
@@ -234,10 +234,10 @@ object AboutForm: TAboutForm
     AnchorSideLeft.Control = Bevel1
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = Bevel1
-    Left = 177
-    Height = 34
+    Left = 173
+    Height = 35
     Top = 205
-    Width = 88
+    Width = 96
     BorderSpacing.Top = 10
     Default = True
     DefaultCaption = True
