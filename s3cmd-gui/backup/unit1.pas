@@ -6,7 +6,8 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  ShellCtrls, Buttons, ComCtrls, IniPropStorage, Types, Process, LCLType;
+  ShellCtrls, Buttons, ComCtrls, IniPropStorage, Types, Process,
+  LCLType, DefaultTranslator;
 
 type
 
@@ -330,8 +331,9 @@ begin
   //Команда
   cmd := '';
 
-  //Если выбрано и выбран не корень
-  if (CompDir.Items.SelectionCount <> 0) and (not CompDir.Items.Item[0].Selected) and (GroupBox2.Caption <> 's3://') then
+  //Если выбрано и выбран не корень и копируем не в корень облака (s3://)
+  if (CompDir.Items.SelectionCount <> 0) and (not CompDir.Items.Item[0].Selected) and
+    (GroupBox2.Caption <> 's3://') then
   begin
     for i := 0 to CompDir.Items.Count - 1 do
     begin

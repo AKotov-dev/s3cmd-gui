@@ -9,13 +9,13 @@ msgstr ""
 "Language-Team: alex_q_2000 (C) 2021\n"
 "MIME-Version: 1.0\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: en\n"
+"Language: ru\n"
 "X-Generator: Poedit 2.4.2\n"
 
 #: taboutform.caption
 msgctxt "taboutform.caption"
 msgid "About"
-msgstr ""
+msgstr "О программе"
 
 #: taboutform.label1.caption
 msgid "s3cmd-gui -v0.1"
@@ -32,22 +32,30 @@ msgid ""
 "\n"
 "Russian Linux Forum: https://linuxforum.ru\n"
 msgstr ""
+"GUI for консольного клиента S3\n"
+"\n"
+"Лицензия: GPLv3\n"
+"Компиляция: Lazarus 2.0.10\n"
+"Автор: alex_q_2000 (C) 2021\n"
+"Благодарности: Florent Viard + Co (GitHub)\n"
+"\n"
+"Russian Linux Forum: https://linuxforum.ru\n"
 
 #: tbucketform.caption
 msgid "Create a new bucket"
-msgstr ""
+msgstr "Создать новый бакет"
 
 #: tbucketform.checkbox1.caption
 msgid "Public/Private"
-msgstr ""
+msgstr "Публичный /Приватный"
 
 #: tbucketform.label1.caption
 msgid "Name:"
-msgstr ""
+msgstr "Имя:"
 
 #: tconfigform.caption
 msgid "Configuration"
-msgstr ""
+msgstr "Конфигурация"
 
 #: tconfigform.label1.caption
 msgid "access_key ="
@@ -72,7 +80,7 @@ msgstr ""
 #: tmainform.addbtn.hint
 msgctxt "tmainform.addbtn.hint"
 msgid "Create New Bucket"
-msgstr ""
+msgstr "Создать новый бакет"
 
 #: tmainform.caption
 msgid "s3cmd-gui v0.1"
@@ -80,20 +88,20 @@ msgstr ""
 
 #: tmainform.copyfrompc.hint
 msgid "Copy to Bucket"
-msgstr ""
+msgstr "Копировать в бакет"
 
 #: tmainform.copyfromsmartphone.hint
 msgid "Copy to Computer"
-msgstr ""
+msgstr "Копировать на компьютер"
 
 #: tmainform.delbtn.hint
 msgctxt "tmainform.delbtn.hint"
 msgid "Delete Bucket/Files/Folders"
-msgstr ""
+msgstr "Удалить Бакет/Файлы/Папки"
 
 #: tmainform.groupbox1.caption
 msgid "computer"
-msgstr ""
+msgstr "компьютер"
 
 #: tmainform.groupbox2.caption
 msgid "s3://"
@@ -102,12 +110,12 @@ msgstr ""
 #: tmainform.infobtn.hint
 msgctxt "tmainform.infobtn.hint"
 msgid "About"
-msgstr ""
+msgstr "О программе"
 
 #: tmainform.mkpcdirbtn.hint
 msgctxt "tmainform.mkpcdirbtn.hint"
 msgid "Create New Folder"
-msgstr ""
+msgstr "Создать новый каталог"
 
 #: tmainform.panel1.caption
 msgid "Panel1"
@@ -119,42 +127,41 @@ msgstr ""
 
 #: tmainform.refreshbtn.hint
 msgid "Update"
-msgstr ""
+msgstr "Обновить"
 
 #: tmainform.selectallbtn.hint
 msgid "Select All (not buckets)"
-msgstr ""
+msgstr "Выбрать все (не бакеты)"
 
 #: tmainform.settingsbtn.hint
 msgctxt "tmainform.settingsbtn.hint"
 msgid "Connection Settings"
-msgstr ""
+msgstr "Настройки подключения"
 
 #: tmainform.upbtn.hint
 msgid "Upper Level"
-msgstr ""
+msgstr "Верхний уровень"
 
 #: unit1.scancelcopyng
 msgid "Esc - cancel... "
-msgstr ""
+msgstr "Esc - отмена... "
 
 #: unit1.screatedir
 msgid "Create directory"
-msgstr ""
+msgstr "Создать каталог"
 
 #: unit1.sdelete
 msgid "Delete selected object(s)?"
-msgstr ""
+msgstr "Удалить выбранный объект(ы)?"
 
 #: unit1.sinputname
 msgid "Enter the name:"
-msgstr ""
+msgstr "Введите имя:"
 
 #: unit1.sobjectexists
 msgid "The folder already exists!"
-msgstr ""
+msgstr "Каталог уже существует!"
 
 #: unit1.soverwriteobject
 msgid "Overwrite existing objects?"
-msgstr ""
-
+msgstr "Перезаписать существующие объекты?"

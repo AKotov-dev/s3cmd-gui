@@ -80,7 +80,7 @@ object MainForm: TMainForm
       object CopyFromPC: TSpeedButton
         Left = 8
         Height = 40
-        Hint = 'Copy to Cloud'
+        Hint = 'Copy to Bucket'
         Top = 8
         Width = 40
         Flat = True
@@ -223,7 +223,7 @@ object MainForm: TMainForm
       object MkPCDirBtn: TSpeedButton
         Left = 56
         Height = 40
-        Hint = 'Make folder'
+        Hint = 'Create New Folder'
         Top = 8
         Width = 40
         Flat = True
@@ -987,7 +987,7 @@ object MainForm: TMainForm
       object UpBtn: TSpeedButton
         Left = 52
         Height = 40
-        Hint = 'Upper level'
+        Hint = 'Upper Level'
         Top = 8
         Width = 40
         Flat = True
@@ -1277,7 +1277,7 @@ object MainForm: TMainForm
       object AddBtn: TSpeedButton
         Left = 142
         Height = 40
-        Hint = 'Add New Bucket'
+        Hint = 'Create New Bucket'
         Top = 8
         Width = 40
         Flat = True
@@ -1421,7 +1421,7 @@ object MainForm: TMainForm
         AnchorSideRight.Control = SettingsBtn
         Left = 404
         Height = 40
-        Hint = 'Connection Settings'
+        Hint = 'About'
         Top = 8
         Width = 40
         Anchors = [akTop, akRight]
