@@ -1,7 +1,7 @@
 object AboutForm: TAboutForm
-  Left = 322
+  Left = 538
   Height = 248
-  Top = 130
+  Top = 298
   Width = 442
   ActiveControl = BitBtn1
   Caption = 'About'

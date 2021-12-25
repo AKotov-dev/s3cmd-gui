@@ -8,7 +8,7 @@ uses {$IFDEF UNIX}
   Forms,
   Unit1,
   config_unit,
-  bucket_unit, about_unit { you can add units after this };
+  bucket_unit, about_unit, FirstConnectTRD { you can add units after this };
 
 {$R *.res}
 

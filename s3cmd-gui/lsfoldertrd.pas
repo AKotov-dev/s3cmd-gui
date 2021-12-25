@@ -5,7 +5,7 @@ unit LSFolderTRD;
 interface
 
 uses
-  Classes, Process, SysUtils, Forms, Controls, Dialogs;
+  Classes, Process, SysUtils, Forms, Controls;
 
 type
   StartLSFolder = class(TThread)
@@ -24,9 +24,6 @@ type
     procedure HideProgress;
 
   end;
-
-var
-  android7: boolean;
 
 implementation
 
@@ -50,9 +47,9 @@ begin
     ExProcess := TProcess.Create(nil);
     ExProcess.Executable := 'bash';
     ExProcess.Parameters.Add('-c');
-    //Ошибки не выводим, только список, ждём окончания потока
-    ExProcess.Options := [poWaitOnExit, poUsePipes];
 
+    //Ошибки не выводим, только список, ждём окончания потока
+    ExProcess.Options := [poUsePipes];  //poWaitOnExit,
     //ls текущего каталога с заменой спецсимволов
     if MainForm.GroupBox2.Caption = 's3://' then
       ExProcess.Parameters.Add('s3cmd ls | cut -d " " -f4')
@@ -83,7 +80,6 @@ end;
 procedure StartLSFolder.HideProgress;
 begin
   //Очищаем команду для корректного "Esc"
-  lscmd := '';
   Screen.cursor := crDefault;
 end;
 

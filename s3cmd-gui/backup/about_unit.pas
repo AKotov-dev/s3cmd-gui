@@ -42,6 +42,7 @@ end;
 
 procedure TAboutForm.FormShow(Sender: TObject);
 begin
+  Label1.Caption := Application.Title;
   AboutForm.Width := Label2.Left + Label2.Width + 20;
   AboutForm.Height := BitBtn1.Top + BitBtn1.Height + 8;
 end;

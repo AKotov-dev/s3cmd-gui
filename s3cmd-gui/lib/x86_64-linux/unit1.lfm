@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 290
+  Left = 292
   Height = 672
-  Top = 121
+  Top = 123
   Width = 1005
   ActiveControl = Splitter2
   Caption = 's3cmd-gui v0.1'

@@ -59,6 +59,7 @@ type
     procedure StartCmd;
     procedure UpBtnClick(Sender: TObject);
     procedure ReadS3Root;
+    procedure CheckConnect;
 
   private
 
@@ -68,7 +69,7 @@ type
 
 var
   left_panel: boolean;
-  cmd, lscmd: string;
+  cmd: string;
 
 resourcestring
   SDelete = 'Delete selected object(s)?';
@@ -83,17 +84,25 @@ var
 
 implementation
 
-uses config_unit, bucket_unit, about_unit, lsfoldertrd, S3CommandTRD;
+uses config_unit, bucket_unit, about_unit, lsfoldertrd, S3CommandTRD, FirstConnectTRD;
 
 {$R *.lfm}
 
 { TMainForm }
 
+//Ошибки первого подключения
+procedure TMainForm.CheckConnect;
+var
+  FStartFirstConnect: TThread;
+begin
+  FStartFirstConnect := StartFirstConnect.Create(False);
+  FStartFirstConnect.Priority := tpHighest; //tpHigher
+end;
+
 //Чтение корня хранилища
 procedure TMainForm.ReadS3Root;
 begin
   GroupBox2.Caption := 's3://';
-  lscmd := 's3cmd --recursive ls | cut -d " " -f4';
   StartLS;
 end;
 
@@ -143,7 +152,7 @@ begin
     ExProcess.Executable := 'bash';
     ExProcess.Parameters.Add('-c');
     ExProcess.Parameters.Add(command);
-    ExProcess.Options := [poWaitOnExit, poUsePipes, poStderrToOutPut];
+    ExProcess.Options := [poWaitOnExit, poUsePipes];
     ExProcess.Execute;
   finally
     ExProcess.Free;
@@ -440,10 +449,13 @@ end;
 procedure TMainForm.FormShow(Sender: TObject);
 begin
   IniPropStorage1.Restore;
-  ReadS3Root;
+  //Проверяем подключение выводим ошибки в SDMemo
+  MainForm.CheckConnect;
+  //Указатель в корень (s3://) и перечитываем
+  MainForm.ReadS3Root;
 end;
 
-//Создать каталог на SD-Card
+//Создать каталог на компе
 procedure TMainForm.MkPCDirBtnClick(Sender: TObject);
 var
   S: string;
@@ -472,6 +484,7 @@ begin
   CompDirUpdate;
 end;
 
+//Перечитываем папку на компе
 procedure TMainForm.RefreshBtnClick(Sender: TObject);
 begin
   with CompDir do

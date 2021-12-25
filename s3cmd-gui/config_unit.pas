@@ -60,8 +60,11 @@ begin
     S.Add('host_bucket =' + Edit5.Text);
 
     S.SaveToFile(GetUserDir + '.s3cfg');
-    left_panel:=false;
+    left_panel := False;
 
+    //Проверяем подключение выводим ошибки в SDMemo
+    MainForm.CheckConnect;
+    //Указатель в корень (s3://) и перечитываем
     MainForm.ReadS3Root;
   finally
     S.Free;

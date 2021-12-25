@@ -73,7 +73,7 @@
         <PackageName Value="LCL"/>
       </Item1>
     </RequiredPackages>
-    <Units Count="7">
+    <Units Count="8">
       <Unit0>
         <Filename Value="s3cmdgui.lpr"/>
         <IsPartOfProject Value="True"/>
@@ -117,6 +117,11 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
       </Unit6>
+      <Unit7>
+        <Filename Value="firstconnecttrd.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="FirstConnectTRD"/>
+      </Unit7>
     </Units>
   </ProjectOptions>
   <CompilerOptions>
