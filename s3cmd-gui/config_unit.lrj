@@ -1,0 +1,8 @@
+{"version":1,"strings":[
+{"hash":116154878,"name":"tconfigform.caption","sourcebytes":[67,111,110,102,105,103,117,114,97,116,105,111,110],"value":"Configuration"},
+{"hash":255350685,"name":"tconfigform.label1.caption","sourcebytes":[97,99,99,101,115,115,95,107,101,121,32,61],"value":"access_key ="},
+{"hash":265970685,"name":"tconfigform.label2.caption","sourcebytes":[115,101,99,114,101,116,95,107,101,121,32,61],"value":"secret_key ="},
+{"hash":94638013,"name":"tconfigform.label3.caption","sourcebytes":[98,117,99,107,101,116,95,108,111,99,97,116,105,111,110,32,61],"value":"bucket_location ="},
+{"hash":99089821,"name":"tconfigform.label4.caption","sourcebytes":[104,111,115,116,95,98,97,115,101,32,61],"value":"host_base ="},
+{"hash":84632525,"name":"tconfigform.label5.caption","sourcebytes":[104,111,115,116,95,98,117,99,107,101,116,32,61],"value":"host_bucket ="}
+]}

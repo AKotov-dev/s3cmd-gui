@@ -1,0 +1,148 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: taboutform.caption
+msgid "About"
+msgstr ""
+
+#: taboutform.label1.caption
+msgid "s3cmd-gui -v0.1"
+msgstr ""
+
+#: taboutform.label2.caption
+msgid ""
+"GUI for Command Line S3 Client\n"
+"\n"
+"License: GPLv3\n"
+"Compilation: Lazarus 2.0.10\n"
+"Author: alex_q_2000 (C) 2021\n"
+"Grantitudes: Florent Viard + Co (GitHub)\n"
+"\n"
+"Russian Linux Forum: https://linuxforum.ru\n"
+msgstr ""
+
+#: tbucketform.caption
+msgid "Create a new bucket"
+msgstr ""
+
+#: tbucketform.checkbox1.caption
+msgid "Public/Private"
+msgstr ""
+
+#: tbucketform.label1.caption
+msgid "Name:"
+msgstr ""
+
+#: tconfigform.caption
+msgid "Configuration"
+msgstr ""
+
+#: tconfigform.label1.caption
+msgid "access_key ="
+msgstr ""
+
+#: tconfigform.label2.caption
+msgid "secret_key ="
+msgstr ""
+
+#: tconfigform.label3.caption
+msgid "bucket_location ="
+msgstr ""
+
+#: tconfigform.label4.caption
+msgid "host_base ="
+msgstr ""
+
+#: tconfigform.label5.caption
+msgid "host_bucket ="
+msgstr ""
+
+#: tmainform.addbtn.hint
+msgctxt "tmainform.addbtn.hint"
+msgid "Add New Bucket"
+msgstr ""
+
+#: tmainform.caption
+msgid "s3cmd-gui v0.1"
+msgstr ""
+
+#: tmainform.copyfrompc.hint
+msgid "Copy to Cloud"
+msgstr ""
+
+#: tmainform.copyfromsmartphone.hint
+msgid "Copy to Computer"
+msgstr ""
+
+#: tmainform.delbtn.hint
+msgctxt "tmainform.delbtn.hint"
+msgid "Delete Bucket/Files/Folders"
+msgstr ""
+
+#: tmainform.groupbox1.caption
+msgid "computer"
+msgstr ""
+
+#: tmainform.groupbox2.caption
+msgid "s3://"
+msgstr ""
+
+#: tmainform.infobtn.hint
+msgctxt "tmainform.infobtn.hint"
+msgid "Connection Settings"
+msgstr ""
+
+#: tmainform.mkpcdirbtn.hint
+msgctxt "tmainform.mkpcdirbtn.hint"
+msgid "Make folder"
+msgstr ""
+
+#: tmainform.panel1.caption
+msgid "Panel1"
+msgstr ""
+
+#: tmainform.panel2.caption
+msgid "Panel2"
+msgstr ""
+
+#: tmainform.refreshbtn.hint
+msgid "Update"
+msgstr ""
+
+#: tmainform.selectallbtn.hint
+msgid "Select All (not buckets)"
+msgstr ""
+
+#: tmainform.settingsbtn.hint
+msgctxt "tmainform.settingsbtn.hint"
+msgid "Connection Settings"
+msgstr ""
+
+#: tmainform.upbtn.hint
+msgid "Upper level"
+msgstr ""
+
+#: unit1.scancelcopyng
+msgid "Esc - cancel... "
+msgstr ""
+
+#: unit1.screatedir
+msgid "Create directory"
+msgstr ""
+
+#: unit1.sdelete
+msgid "Delete selected object(s)?"
+msgstr ""
+
+#: unit1.sinputname
+msgid "Enter the name:"
+msgstr ""
+
+#: unit1.sobjectexists
+msgid "The folder already exists!"
+msgstr ""
+
+#: unit1.soverwriteobject
+msgid "Overwrite existing objects?"
+msgstr ""
+

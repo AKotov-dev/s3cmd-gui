@@ -1,0 +1,168 @@
+object ConfigForm: TConfigForm
+  Left = 437
+  Height = 253
+  Top = 145
+  Width = 548
+  Caption = 'Configuration'
+  ClientHeight = 253
+  ClientWidth = 548
+  OnClose = FormClose
+  OnCreate = FormCreate
+  Position = poMainFormCenter
+  SessionProperties = 'Edit1.Text;Edit2.Text;Edit3.Text;Edit4.Text;Edit5.Text'
+  LCLVersion = '2.0.10.0'
+  object Label1: TLabel
+    AnchorSideTop.Control = Edit1
+    AnchorSideTop.Side = asrCenter
+    Left = 8
+    Height = 15
+    Top = 19
+    Width = 76
+    Caption = 'access_key ='
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    AnchorSideLeft.Control = Label1
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 89
+    Height = 36
+    Top = 8
+    Width = 451
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 5
+    BorderSpacing.Right = 8
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    AnchorSideTop.Control = Edit2
+    AnchorSideTop.Side = asrCenter
+    Left = 8
+    Height = 15
+    Top = 59
+    Width = 74
+    Caption = 'secret_key ='
+    ParentColor = False
+  end
+  object Edit2: TEdit
+    AnchorSideLeft.Control = Label2
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 87
+    Height = 36
+    Top = 48
+    Width = 453
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 5
+    BorderSpacing.Right = 8
+    TabOrder = 1
+  end
+  object Label3: TLabel
+    AnchorSideTop.Control = Edit3
+    AnchorSideTop.Side = asrCenter
+    Left = 8
+    Height = 15
+    Top = 99
+    Width = 107
+    Caption = 'bucket_location ='
+    ParentColor = False
+  end
+  object Edit3: TEdit
+    AnchorSideLeft.Control = Label3
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 120
+    Height = 36
+    Top = 88
+    Width = 420
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 5
+    BorderSpacing.Right = 8
+    TabOrder = 2
+  end
+  object Label4: TLabel
+    AnchorSideTop.Control = Edit4
+    AnchorSideTop.Side = asrCenter
+    Left = 8
+    Height = 15
+    Top = 139
+    Width = 73
+    Caption = 'host_base ='
+    ParentColor = False
+  end
+  object Edit4: TEdit
+    AnchorSideLeft.Control = Label4
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 86
+    Height = 36
+    Top = 128
+    Width = 454
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 5
+    BorderSpacing.Right = 8
+    TabOrder = 3
+  end
+  object Label5: TLabel
+    AnchorSideTop.Control = Edit5
+    AnchorSideTop.Side = asrCenter
+    Left = 8
+    Height = 15
+    Top = 179
+    Width = 85
+    Caption = 'host_bucket ='
+    ParentColor = False
+  end
+  object Edit5: TEdit
+    AnchorSideLeft.Control = Label5
+    AnchorSideLeft.Side = asrBottom
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 98
+    Height = 36
+    Top = 168
+    Width = 442
+    Anchors = [akTop, akLeft, akRight]
+    BorderSpacing.Left = 5
+    BorderSpacing.Right = 8
+    TabOrder = 4
+  end
+  object BitBtn1: TBitBtn
+    AnchorSideRight.Control = Owner
+    AnchorSideRight.Side = asrBottom
+    Left = 430
+    Height = 38
+    Top = 208
+    Width = 110
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 8
+    Default = True
+    DefaultCaption = True
+    Kind = bkOK
+    ModalResult = 1
+    OnClick = BitBtn1Click
+    TabOrder = 5
+  end
+  object BitBtn2: TBitBtn
+    AnchorSideRight.Control = BitBtn1
+    Left = 318
+    Height = 38
+    Top = 208
+    Width = 110
+    Anchors = [akTop, akRight]
+    BorderSpacing.Right = 2
+    DefaultCaption = True
+    Kind = bkClose
+    ModalResult = 11
+    TabOrder = 6
+  end
+  object IniPropStorage1: TIniPropStorage
+    StoredValues = <>
+    Left = 176
+    Top = 200
+  end
+end
