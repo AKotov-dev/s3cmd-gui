@@ -451,6 +451,7 @@ end;
 
 procedure TMainForm.FormShow(Sender: TObject);
 begin
+  MainForm.Caption := Application.Title;
   IniPropStorage1.Restore;
   //Проверяем подключение выводим ошибки в SDMemo
   MainForm.CheckConnect;

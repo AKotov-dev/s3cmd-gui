@@ -14,7 +14,7 @@ uses {$IFDEF UNIX}
 
 begin
   RequireDerivedFormResource := True;
-  Application.Title:='s3cmd-gui v0.1';
+  Application.Title:='S3cmd-GUI v0.2';
   Application.Scaled := True;
   Application.Initialize;
   Application.CreateForm(TMainForm, MainForm);
