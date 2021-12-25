@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 437
+  Left = 290
   Height = 672
-  Top = 131
+  Top = 121
   Width = 1005
   ActiveControl = Splitter2
   Caption = 's3cmd-gui v0.1'
@@ -532,6 +532,9 @@ object MainForm: TMainForm
       BorderStyle = bsNone
       Font.Height = -13
       Font.Name = 'Sans'
+      Items.Strings = (
+        'waiting for connection...'
+      )
       ItemHeight = 22
       OnDblClick = SDBoxDblClick
       OnDrawItem = SDBoxDrawItem
@@ -539,7 +542,6 @@ object MainForm: TMainForm
       ScrollWidth = 498
       Style = lbOwnerDrawFixed
       TabOrder = 0
-      TopIndex = -1
     end
     object Panel3: TPanel
       Left = 0

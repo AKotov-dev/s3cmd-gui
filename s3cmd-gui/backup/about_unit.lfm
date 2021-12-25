@@ -3,6 +3,7 @@ object AboutForm: TAboutForm
   Height = 248
   Top = 130
   Width = 442
+  ActiveControl = BitBtn1
   Caption = 'About'
   ClientHeight = 248
   ClientWidth = 442
