@@ -70,8 +70,10 @@ toolversion=2.0.10
 [INFO]
 0=GUI for Command Line S3 Client (Amazon)
 1=
-2=v0.4 + warning about canceling copying when closing
-3=
-4=v0.3 + output of progress to the log (--progress)
+2=v0.4
+3=+ warning about canceling copying when closing
+4=+ working out a task before completion or cancellation
 5=
-6=v0.2 - initial release
+6=v0.3 + output of progress to the log (--progress)
+7=
+8=v0.2 - initial release

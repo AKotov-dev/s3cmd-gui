@@ -4,7 +4,7 @@ object MainForm: TMainForm
   Top = 123
   Width = 1005
   ActiveControl = Splitter2
-  Caption = 's3cmd-gui v0.1'
+  Caption = 'S3cmd-GUI'
   ClientHeight = 672
   ClientWidth = 1005
   KeyPreview = True

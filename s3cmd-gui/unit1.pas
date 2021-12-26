@@ -260,12 +260,16 @@ var
   c: string;
   e: boolean;
 begin
+  //Если команда выполняется - следующую не запускать
+  if cmd <> '' then
+    exit;
+
   //Флаг выбора панели
   left_panel := True;
 
   c := '';
-  e := False; //Флаг совпадения файлов/папок (перезапись)
   cmd := '';  //Команда
+  e := False; //Флаг совпадения файлов/папок (перезапись)
 
   if (SDBox.SelCount <> 0) and (GroupBox2.Caption <> 's3://') then
   begin
@@ -302,7 +306,12 @@ begin
   //Предупреждение о завершении обмена с облаком, если в прогрессе
   if cmd <> '' then
     if MessageDlg(SCloseQuery, mtWarning, [mbYes, mbCancel], 0) <> mrYes then
-      Canclose := False;
+      Canclose := False
+    else
+    begin
+      StartProcess('killall s3cmd');
+      CanClose := True;
+    end;
 end;
 
 //Форма About
@@ -315,6 +324,9 @@ end;
 //Форма создания бакета
 procedure TMainForm.AddBtnClick(Sender: TObject);
 begin
+  //Если команда выполняется - следующую не запускать
+  if cmd <> '' then
+    exit;
   BucketForm := TBucketForm.Create(Application);
   BucketForm.ShowModal;
 end;
@@ -322,6 +334,9 @@ end;
 //Форма конфигурации ~/.s3cfg
 procedure TMainForm.SettingsBtnClick(Sender: TObject);
 begin
+  //Если команда выполняется - следующую не запускать
+  if cmd <> '' then
+    exit;
   ConfigForm := TConfigForm.Create(Application);
   ConfigForm.ShowModal;
 end;
@@ -333,6 +348,10 @@ var
   c: string;
   e: boolean;
 begin
+  //Если команда выполняется - следующую не запускать
+  if cmd <> '' then
+    exit;
+
   //Флаг выбора панели
   left_panel := False;
 
@@ -381,7 +400,7 @@ var
   i: integer;
   c: string; //сборка команд...
 begin
-  if SDBox.Count = 0 then
+  if (SDBox.Count = 0) or (cmd <> '') then
     Exit;
 
   //Команда в поток
