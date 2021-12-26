@@ -268,8 +268,8 @@ begin
   left_panel := True;
 
   c := '';
-  e := False; //Флаг совпадения файлов/папок (перезапись)
   cmd := '';  //Команда
+  e := False; //Флаг совпадения файлов/папок (перезапись)
 
   if (SDBox.SelCount <> 0) and (GroupBox2.Caption <> 's3://') then
   begin
@@ -306,7 +306,12 @@ begin
   //Предупреждение о завершении обмена с облаком, если в прогрессе
   if cmd <> '' then
     if MessageDlg(SCloseQuery, mtWarning, [mbYes, mbCancel], 0) <> mrYes then
-      Canclose := False;
+      Canclose := False
+    else
+    begin
+      StartProcess('killall s3cmd');
+      CanClose := True;
+    end;
 end;
 
 //Форма About

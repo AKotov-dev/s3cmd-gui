@@ -50,6 +50,7 @@ var
   S: TStringList;
 begin
   left_panel := False;
+
   try
     S := TStringList.Create;
     S.Add('[default]');
