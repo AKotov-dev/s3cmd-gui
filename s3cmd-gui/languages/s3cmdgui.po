@@ -75,7 +75,7 @@ msgid "Create new bucket"
 msgstr ""
 
 #: tmainform.caption
-msgid "s3cmd-gui v0.1"
+msgid "S3cmd-GUI"
 msgstr ""
 
 #: tmainform.copyfrompc.hint
@@ -136,6 +136,10 @@ msgstr ""
 
 #: unit1.scancelcopyng
 msgid "Esc - cancel... "
+msgstr ""
+
+#: unit1.sclosequery
+msgid "Copying is in progress! Finish the process?"
 msgstr ""
 
 #: unit1.screatedir

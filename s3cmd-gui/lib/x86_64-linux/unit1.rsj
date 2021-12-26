@@ -4,5 +4,6 @@
 {"hash":16099201,"name":"unit1.sobjectexists","sourcebytes":[84,104,101,32,102,111,108,100,101,114,32,97,108,114,101,97,100,121,32,101,120,105,115,116,115,33],"value":"The folder already exists!"},
 {"hash":1668393,"name":"unit1.screatedir","sourcebytes":[67,114,101,97,116,101,32,100,105,114,101,99,116,111,114,121],"value":"Create directory"},
 {"hash":229659962,"name":"unit1.sinputname","sourcebytes":[69,110,116,101,114,32,116,104,101,32,110,97,109,101,58],"value":"Enter the name:"},
-{"hash":189624336,"name":"unit1.scancelcopyng","sourcebytes":[69,115,99,32,45,32,99,97,110,99,101,108,46,46,46,32],"value":"Esc - cancel... "}
+{"hash":189624336,"name":"unit1.scancelcopyng","sourcebytes":[69,115,99,32,45,32,99,97,110,99,101,108,46,46,46,32],"value":"Esc - cancel... "},
+{"hash":160761119,"name":"unit1.sclosequery","sourcebytes":[67,111,112,121,105,110,103,32,105,115,32,105,110,32,112,114,111,103,114,101,115,115,33,32,70,105,110,105,115,104,32,116,104,101,32,112,114,111,99,101,115,115,63],"value":"Copying is in progress! Finish the process?"}
 ]}

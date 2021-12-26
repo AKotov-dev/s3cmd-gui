@@ -83,7 +83,7 @@ msgid "Create new bucket"
 msgstr "Создать новый бакет"
 
 #: tmainform.caption
-msgid "s3cmd-gui v0.1"
+msgid "S3cmd-GUI"
 msgstr ""
 
 #: tmainform.copyfrompc.hint
@@ -146,6 +146,10 @@ msgstr "Верхний уровень"
 msgid "Esc - cancel... "
 msgstr "Esc - отмена... "
 
+#: unit1.sclosequery
+msgid "Copying is in progress! Finish the process?"
+msgstr "Выполняется копирование! Завершить процесс?"
+
 #: unit1.screatedir
 msgid "Create directory"
 msgstr "Создать каталог"
@@ -165,3 +169,4 @@ msgstr "Каталог уже существует!"
 #: unit1.soverwriteobject
 msgid "Overwrite existing objects?"
 msgstr "Перезаписать существующие объекты?"
+

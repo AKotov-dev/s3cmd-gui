@@ -1,13 +1,14 @@
 object MainForm: TMainForm
-  Left = 293
+  Left = 287
   Height = 672
-  Top = 124
+  Top = 123
   Width = 1005
   ActiveControl = Splitter2
   Caption = 's3cmd-gui v0.1'
   ClientHeight = 672
   ClientWidth = 1005
   KeyPreview = True
+  OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
   OnKeyUp = FormKeyUp
   OnShow = FormShow

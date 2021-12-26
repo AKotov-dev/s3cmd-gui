@@ -41,6 +41,7 @@ type
     procedure AddBtnClick(Sender: TObject);
     procedure CompDirGetImageIndex(Sender: TObject; Node: TTreeNode);
     procedure CopyFromSmartphoneClick(Sender: TObject);
+    procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure InfoBtnClick(Sender: TObject);
     procedure SettingsBtnClick(Sender: TObject);
     procedure CopyFromPCClick(Sender: TObject);
@@ -79,6 +80,7 @@ resourcestring
   SCreateDir = 'Create directory';
   SInputName = 'Enter the name:';
   SCancelCopyng = 'Esc - cancel... ';
+  SCloseQuery = 'Copying is in progress! Finish the process?';
 
 var
   MainForm: TMainForm;
@@ -278,7 +280,7 @@ begin
             SDBox.Items[i]))) then
             e := True;
 
-        c := 's3cmd get --verbose --recursive --force ' + '''' +
+        c := 's3cmd get --progress --recursive --force ' + '''' +
           GroupBox2.Caption + SDBox.Items[i] + '''' + ' ' + '''' +
           ExtractFilePath(CompDir.GetPathFromNode(CompDir.Selected)) + '''';
 
@@ -293,6 +295,14 @@ begin
 
     StartCmd;
   end;
+end;
+
+procedure TMainForm.FormCloseQuery(Sender: TObject; var CanClose: boolean);
+begin
+  //Предупреждение о завершении обмена с облаком, если в прогрессе
+  if cmd <> '' then
+    if MessageDlg(SCloseQuery, mtWarning, [mbYes, mbCancel], 0) <> mrYes then
+      Canclose := False;
 end;
 
 //Форма About
