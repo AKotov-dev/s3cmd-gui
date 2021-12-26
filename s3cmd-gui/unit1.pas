@@ -334,9 +334,6 @@ end;
 //Форма конфигурации ~/.s3cfg
 procedure TMainForm.SettingsBtnClick(Sender: TObject);
 begin
-  //Если команда выполняется - следующую не запускать
-  if cmd <> '' then
-    exit;
   ConfigForm := TConfigForm.Create(Application);
   ConfigForm.ShowModal;
 end;

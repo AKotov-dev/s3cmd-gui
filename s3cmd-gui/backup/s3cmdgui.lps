@@ -48,9 +48,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="92"/>
-        <CursorPos X="3" Y="403"/>
+        <TopLine Value="457"/>
+        <CursorPos X="42" Y="460"/>
         <UsageCount Value="39"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -78,7 +77,7 @@
         <ComponentName Value="ConfigForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="2"/>
         <TopLine Value="48"/>
         <CursorPos X="3" Y="53"/>
         <UsageCount Value="32"/>
@@ -111,10 +110,11 @@
         <Filename Value="firstconnecttrd.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="FirstConnectTRD"/>
-        <EditorIndex Value="-1"/>
-        <TopLine Value="34"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
         <CursorPos X="27" Y="52"/>
         <UsageCount Value="22"/>
+        <Loaded Value="True"/>
       </Unit7>
       <Unit8>
         <Filename Value="lssdfoldertrd.pas"/>
@@ -139,7 +139,7 @@
         <UsageCount Value="10"/>
       </Unit10>
     </Units>
-    <JumpHistory Count="19" HistoryIndex="18">
+    <JumpHistory Count="20" HistoryIndex="19">
       <Position1>
         <Filename Value="unit1.pas"/>
         <Caret Line="282" Column="35" TopLine="261"/>
@@ -216,6 +216,10 @@
         <Filename Value="config_unit.pas"/>
         <Caret Line="89" Column="3" TopLine="58"/>
       </Position19>
+      <Position20>
+        <Filename Value="unit1.pas"/>
+        <Caret Line="403" Column="3" TopLine="372"/>
+      </Position20>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>
