@@ -1,10 +1,10 @@
 object ConfigForm: TConfigForm
-  Left = 364
-  Height = 247
-  Top = 149
+  Left = 351
+  Height = 251
+  Top = 132
   Width = 548
   Caption = 'Configuration'
-  ClientHeight = 247
+  ClientHeight = 251
   ClientWidth = 548
   OnClose = FormClose
   OnShow = FormShow

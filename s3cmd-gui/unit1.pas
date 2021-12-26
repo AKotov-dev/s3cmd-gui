@@ -278,7 +278,7 @@ begin
             SDBox.Items[i]))) then
             e := True;
 
-        c := 's3cmd get --verbose --recursive --force ' + '''' +
+        c := 's3cmd get --progress --recursive --force ' + '''' +
           GroupBox2.Caption + SDBox.Items[i] + '''' + ' ' + '''' +
           ExtractFilePath(CompDir.GetPathFromNode(CompDir.Selected)) + '''';
 
@@ -349,7 +349,7 @@ begin
               e := True;
           end;
 
-        c := 's3cmd --verbose --recursive put ' + '''' +
+        c := 's3cmd --progress --recursive put ' + '''' +
           ExcludeTrailingPathDelimiter(CompDir.Items[i].GetTextPath) +
           '''' + ' ' + '''' + GroupBox2.Caption + '''';
 

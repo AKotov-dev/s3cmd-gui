@@ -349,7 +349,7 @@ begin
               e := True;
           end;
 
-        c := 's3cmd --verbose --recursive put ' + '''' +
+        c := 's3cmd --progress --recursive put ' + '''' +
           ExcludeTrailingPathDelimiter(CompDir.Items[i].GetTextPath) +
           '''' + ' ' + '''' + GroupBox2.Caption + '''';
 
@@ -371,7 +371,8 @@ var
   i: integer;
   c: string; //сборка команд...
 begin
-  if SDBox.Count = 0 then Exit;
+  if SDBox.Count = 0 then
+    Exit;
 
   //Команда в поток
   cmd := '';
