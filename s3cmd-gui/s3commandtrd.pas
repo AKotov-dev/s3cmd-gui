@@ -136,8 +136,6 @@ begin
     stop := False;
     MainForm.StartProcess('killall s3cmd');
     MainForm.SDMemo.Append('s3cmd-gui: cancel operation...');
-    //Очищаем команду для корректного "Esc" (выход по требованию)
-    cmd := '';
   end;
 
   //Вывод пачками

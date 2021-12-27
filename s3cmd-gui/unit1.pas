@@ -465,7 +465,10 @@ begin
   begin
     //Если копирование выполняется - отменяем
     if cmd <> '' then
+    begin
       stop := True;
+      StartProcess('killall s3cmd');
+    end;
   end;
 end;
 
