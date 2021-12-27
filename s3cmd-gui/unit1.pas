@@ -320,7 +320,7 @@ begin
     begin
       //    stop := True;
       StartProcess('killall s3cmd');
-      SDMemo.Append('S3cmd-GUI: Esc - Cancel operation...');
+      SDMemo.Append('S3cmd-GUI: Esc - Cancellation of the operation...');
     end;
   end;
 end;

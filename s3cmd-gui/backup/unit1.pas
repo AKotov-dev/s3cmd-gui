@@ -42,7 +42,7 @@ type
     procedure CompDirGetImageIndex(Sender: TObject; Node: TTreeNode);
     procedure CopyFromBucketClick(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
-    procedure FormKeyDown(Sender: TObject; var Key: Word; Shift: TShiftState);
+    procedure FormKeyDown(Sender: TObject; var Key: word; Shift: TShiftState);
     procedure InfoBtnClick(Sender: TObject);
     procedure SettingsBtnClick(Sender: TObject);
     procedure CopyFromPCClick(Sender: TObject);
@@ -310,15 +310,15 @@ begin
     end;
 end;
 
-procedure TMainForm.FormKeyDown(Sender: TObject; var Key: Word;
-  Shift: TShiftState);
+//Esc - отмена операций
+procedure TMainForm.FormKeyDown(Sender: TObject; var Key: word; Shift: TShiftState);
 begin
-    if key = VK_ESCAPE then
+  if key = VK_ESCAPE then
   begin
     //Если копирование выполняется - отменяем
     if cmd <> '' then
     begin
-  //    stop := True;
+      //    stop := True;
       StartProcess('killall s3cmd');
       SDMemo.Append('S3cmd-GUI: Esc - Cancel operation...');
     end;
