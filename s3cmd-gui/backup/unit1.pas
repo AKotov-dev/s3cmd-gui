@@ -466,8 +466,7 @@ begin
     //Если копирование выполняется - отменяем
     if cmd <> '' then
     begin
-      cmd:='exit';
-      stop := True;
+  //    stop := True;
       StartProcess('killall s3cmd');
     end;
   end;
