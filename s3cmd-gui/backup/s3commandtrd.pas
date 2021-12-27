@@ -5,7 +5,7 @@ unit S3CommandTRD;
 interface
 
 uses
-  Classes, Process, SysUtils, ComCtrls;
+  Classes, Process, SysUtils, ComCtrls, Dialogs;
 
 type
   StartS3Command = class(TThread)
@@ -81,14 +81,17 @@ begin
   with MainForm do
   begin
     SDMemo.Clear;
+
+    //Запрещаем параллельное копирование
+    CopyFromPC.Enabled := False;
+    CopyFromBucket.Enabled := False;
+    AddBtn.Enabled := False;
+    DelBtn.Enabled := False;
+
     //Метка отмены копирования
     Panel4.Caption := SCancelCopyng;
     ProgressBar1.Style := pbstMarquee;
     ProgressBar1.Refresh;
-    //Запрещаем параллельное копирование
-    CopyFromPC.Enabled := False;
-    CopyFromBucket.Enabled := False;
-    DelBtn.Enabled := False;
   end;
 end;
 
@@ -99,13 +102,13 @@ begin
   begin
     //Метка отмены копирования
     Panel4.Caption := '';
-    //   ProgressBar1.Visible := False;
     ProgressBar1.Style := pbstNormal;
     ProgressBar1.Refresh;
 
     //Разрешаем копирование
     CopyFromPC.Enabled := True;
     CopyFromBucket.Enabled := True;
+    AddBtn.Enabled := True;
     DelBtn.Enabled := True;
 
     //Обновление каталогов назначения (выборочно)
@@ -126,6 +129,16 @@ begin
   //Вывод построчно
   for i := 0 to Log.Count - 1 do
     MainForm.SDMemo.Lines.Append(Log[i]);
+
+  //Если Esc - завершение/выход
+  if stop then
+  begin
+    stop := False;
+    MainForm.StartProcess('killall s3cmd');
+    MainForm.SDMemo.Append('s3cmd-gui: cancel operation...');
+    //Очищаем команду для корректного "Esc"
+    cmd := '';
+  end;
 
   //Вывод пачками
   //  MainForm.SDMemo.Lines.Assign(Result);

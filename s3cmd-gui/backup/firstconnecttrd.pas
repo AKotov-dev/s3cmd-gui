@@ -20,8 +20,6 @@ type
 
     //Перечитываем текущую директорию SD-Card
     procedure UpdateSDMemo;
-    procedure ShowProgress;
-    procedure HideProgress;
 
   end;
 
@@ -38,7 +36,7 @@ var
   ExProcess: TProcess;
 begin
   try
-    Synchronize(@ShowProgress);
+ //   Synchronize(@ShowProgress);
 
     S := TStringList.Create;
     FreeOnTerminate := True; //Уничтожить по завершении
@@ -49,7 +47,7 @@ begin
     ExProcess.Parameters.Add('-c');
 
     //Выводим ошибки подключения в SDMemo
-    ExProcess.Options := [poWaitOnExit, poUsePipes, poStderrToOutPut];
+    ExProcess.Options := [poUsePipes, poStderrToOutPut];
     ExProcess.Parameters.Add('s3cmd ls >/dev/null');
     ExProcess.Execute;
 
@@ -57,23 +55,11 @@ begin
     Synchronize(@UpdateSDMemo);
 
   finally
-    Synchronize(@HideProgress);
+ //   Synchronize(@HideProgress);
     S.Free;
     ExProcess.Free;
     Terminate;
   end;
-end;
-
-//Начало операции
-procedure StartFirstConnect.ShowProgress;
-begin
-  Screen.cursor := crHourGlass;
-end;
-
-//Окончание операции
-procedure StartFirstConnect.HideProgress;
-begin
-  Screen.cursor := crDefault;
 end;
 
 //Вывод ошибок, если есть

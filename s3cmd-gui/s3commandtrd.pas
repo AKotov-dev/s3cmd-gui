@@ -5,7 +5,7 @@ unit S3CommandTRD;
 interface
 
 uses
-  Classes, Process, SysUtils, ComCtrls;
+  Classes, Process, SysUtils, ComCtrls, Dialogs;
 
 type
   StartS3Command = class(TThread)
@@ -117,7 +117,7 @@ begin
     else
       StartLS;
   end;
-  //Очищаем команду для корректного "Esc"
+  //Очищаем команду для корректного "Esc" (нормальный выход)
   cmd := '';
 end;
 
@@ -129,6 +129,16 @@ begin
   //Вывод построчно
   for i := 0 to Log.Count - 1 do
     MainForm.SDMemo.Lines.Append(Log[i]);
+
+  //Если Esc - завершение/выход
+  if stop then
+  begin
+    stop := False;
+    MainForm.StartProcess('killall s3cmd');
+    MainForm.SDMemo.Append('s3cmd-gui: cancel operation...');
+    //Очищаем команду для корректного "Esc" (выход по требованию)
+    cmd := '';
+  end;
 
   //Вывод пачками
   //  MainForm.SDMemo.Lines.Assign(Result);

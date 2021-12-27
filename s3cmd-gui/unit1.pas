@@ -70,7 +70,7 @@ type
   end;
 
 var
-  left_panel: boolean;
+  left_panel, stop: boolean;
   cmd: string;
 
 resourcestring
@@ -445,6 +445,9 @@ procedure TMainForm.FormCreate(Sender: TObject);
 begin
   //Очищаем переменную команды для потока
   cmd := '';
+  //Флаг Esc - отмена операции
+  stop := False;
+
   CompDir.Root := ExcludeTrailingPathDelimiter(GetUserDir);
   CompDir.Items.Item[0].Selected := True;
 
@@ -462,10 +465,7 @@ begin
   begin
     //Если копирование выполняется - отменяем
     if cmd <> '' then
-    begin
-      StartProcess('killall s3cmd');
-      SDMemo.Append('s3cmd-gui: cancel operation...');
-    end;
+      stop := True;
   end;
 end;
 

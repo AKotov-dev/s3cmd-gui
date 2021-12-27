@@ -1276,7 +1276,7 @@ object MainForm: TMainForm
         ParentShowHint = False
       end
       object AddBtn: TSpeedButton
-        Left = 142
+        Left = 141
         Height = 40
         Hint = 'Create new bucket'
         Top = 8

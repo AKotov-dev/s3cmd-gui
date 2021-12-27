@@ -8,16 +8,17 @@ uses {$IFDEF UNIX}
   Forms,
   Unit1,
   config_unit,
-  bucket_unit, about_unit, FirstConnectTRD { you can add units after this };
+  bucket_unit,
+  about_unit,
+  FirstConnectTRD { you can add units after this };
 
 {$R *.res}
 
 begin
   RequireDerivedFormResource := True;
-  Application.Title:='S3cmd-GUI v0.4';
+  Application.Title := 'S3cmd-GUI v0.4';
   Application.Scaled := True;
   Application.Initialize;
   Application.CreateForm(TMainForm, MainForm);
   Application.Run;
 end.
-

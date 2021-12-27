@@ -5,7 +5,7 @@ unit FirstConnectTRD;
 interface
 
 uses
-  Classes, Process, SysUtils, Forms, Controls;
+  Classes, Process, SysUtils, Forms;
 
 type
   StartFirstConnect = class(TThread)
@@ -20,8 +20,6 @@ type
 
     //Перечитываем текущую директорию SD-Card
     procedure UpdateSDMemo;
-    procedure ShowProgress;
-    procedure HideProgress;
 
   end;
 
@@ -38,8 +36,6 @@ var
   ExProcess: TProcess;
 begin
   try
-    Synchronize(@ShowProgress);
-
     S := TStringList.Create;
     FreeOnTerminate := True; //Уничтожить по завершении
 
@@ -57,23 +53,10 @@ begin
     Synchronize(@UpdateSDMemo);
 
   finally
-    Synchronize(@HideProgress);
     S.Free;
     ExProcess.Free;
     Terminate;
   end;
-end;
-
-//Начало операции
-procedure StartFirstConnect.ShowProgress;
-begin
-  Screen.cursor := crHourGlass;
-end;
-
-//Окончание операции
-procedure StartFirstConnect.HideProgress;
-begin
-  Screen.cursor := crDefault;
 end;
 
 //Вывод ошибок, если есть

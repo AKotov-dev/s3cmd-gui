@@ -70,7 +70,7 @@ type
   end;
 
 var
-  left_panel: boolean;
+  left_panel, stop: boolean;
   cmd: string;
 
 resourcestring
@@ -386,7 +386,8 @@ var
   i: integer;
   c: string; //сборка команд...
 begin
-  if SDBox.Count = 0 then Exit;
+  if SDBox.Count = 0 then
+    Exit;
 
   //Команда в поток
   cmd := '';
@@ -461,10 +462,7 @@ begin
   begin
     //Если копирование выполняется - отменяем
     if cmd <> '' then
-    begin
-      StartProcess('killall s3cmd');
-      SDMemo.Append('s3cmd-gui: cancel operation...');
-    end;
+      stop := True;
   end;
 end;
 
