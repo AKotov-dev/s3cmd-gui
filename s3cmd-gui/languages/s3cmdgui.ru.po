@@ -29,6 +29,7 @@ msgid ""
 "Compilation: Lazarus 2.0.10\n"
 "Author: alex_q_2000 (C) 2021\n"
 "Grantitudes: Florent Viard + Co (GitHub)\n"
+"Jani Välimaa, Lewis Smith (Mageia Linux Team)\n"
 "\n"
 "Russian Linux Forum: https://linuxforum.ru\n"
 msgstr ""
@@ -38,6 +39,7 @@ msgstr ""
 "Компиляция: Lazarus 2.0.10\n"
 "Автор: alex_q_2000 (C) 2021\n"
 "Благодарности: Florent Viard + Co (GitHub)\n"
+"Jani Välimaa, Lewis Smith (Команда Mageia Linux)\n"
 "\n"
 "Russian Linux Forum: https://linuxforum.ru\n"
 
@@ -87,7 +89,6 @@ msgid "S3cmd-GUI"
 msgstr ""
 
 #: tmainform.copyfrombucket.hint
-#, fuzzy
 msgctxt "tmainform.copyfrombucket.hint"
 msgid "Copy to computer"
 msgstr "Копировать на компьютер"
@@ -171,4 +172,3 @@ msgstr "Каталог уже существует!"
 #: unit1.soverwriteobject
 msgid "Overwrite existing objects?"
 msgstr "Перезаписать существующие объекты?"
-

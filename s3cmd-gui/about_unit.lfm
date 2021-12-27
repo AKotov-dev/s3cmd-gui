@@ -1,11 +1,11 @@
 object AboutForm: TAboutForm
-  Left = 538
-  Height = 248
-  Top = 298
+  Left = 361
+  Height = 261
+  Top = 154
   Width = 442
   ActiveControl = BitBtn1
   Caption = 'About'
-  ClientHeight = 248
+  ClientHeight = 261
   ClientWidth = 442
   OnClose = FormClose
   OnShow = FormShow
@@ -209,10 +209,10 @@ object AboutForm: TAboutForm
   object Label2: TLabel
     AnchorSideLeft.Control = Label1
     Left = 156
-    Height = 120
+    Height = 135
     Top = 40
-    Width = 253
-    Caption = 'GUI for Command Line S3 Client'#10#10'License: GPLv3'#10'Compilation: Lazarus 2.0.10'#10'Author: alex_q_2000 (C) 2021'#10'Grantitudes: Florent Viard + Co (GitHub)'#10#10'Russian Linux Forum: https://linuxforum.ru'
+    Width = 276
+    Caption = 'GUI for Command Line S3 Client'#10#10'License: GPLv3'#10'Compilation: Lazarus 2.0.10'#10'Author: alex_q_2000 (C) 2021'#10'Grantitudes: Florent Viard + Co (GitHub)'#10'Jani Välimaa, Lewis Smith (Mageia Linux Team)'#10#10'Russian Linux Forum: https://linuxforum.ru'
     ParentColor = False
   end
   object Bevel1: TBevel
@@ -223,7 +223,7 @@ object AboutForm: TAboutForm
     AnchorSideRight.Side = asrBottom
     Left = 8
     Height = 8
-    Top = 195
+    Top = 210
     Width = 426
     Anchors = [akTop, akLeft, akRight]
     BorderSpacing.Left = 8
@@ -237,7 +237,7 @@ object AboutForm: TAboutForm
     AnchorSideTop.Control = Bevel1
     Left = 173
     Height = 35
-    Top = 205
+    Top = 220
     Width = 96
     BorderSpacing.Top = 10
     Default = True

@@ -467,7 +467,7 @@ begin
     if cmd <> '' then
     begin
       stop := True;
-      StartCommand('killall s3cmd');
+      StartProcess('killall s3cmd');
     end;
   end;
 end;

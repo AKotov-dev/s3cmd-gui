@@ -67,10 +67,9 @@
         <Filename Value="s3commandtrd.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="S3CommandTRD"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
-        <TopLine Value="116"/>
-        <CursorPos X="6" Y="140"/>
+        <TopLine Value="113"/>
+        <CursorPos Y="139"/>
         <UsageCount Value="35"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -100,9 +99,12 @@
         <ComponentName Value="AboutForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="4"/>
         <CursorPos X="35" Y="7"/>
         <UsageCount Value="27"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit6>
       <Unit7>
         <Filename Value="firstconnecttrd.pas"/>
