@@ -10,7 +10,7 @@ object MainForm: TMainForm
   KeyPreview = True
   OnCloseQuery = FormCloseQuery
   OnCreate = FormCreate
-  OnKeyUp = FormKeyUp
+  OnKeyDown = FormKeyDown
   OnShow = FormShow
   SessionProperties = 'GroupBox1.Width;Panel1.Height;Left;Top;Width;Height'
   LCLVersion = '2.0.10.0'
@@ -843,7 +843,7 @@ object MainForm: TMainForm
         ParentShowHint = False
       end
       object DelBtn: TSpeedButton
-        Left = 185
+        Left = 140
         Height = 40
         Hint = 'Delete Bucket/Files/Folders'
         Top = 8
@@ -1276,7 +1276,7 @@ object MainForm: TMainForm
         ParentShowHint = False
       end
       object AddBtn: TSpeedButton
-        Left = 141
+        Left = 184
         Height = 40
         Hint = 'Create new bucket'
         Top = 8

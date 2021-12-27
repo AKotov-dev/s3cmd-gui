@@ -42,12 +42,12 @@ type
     procedure CompDirGetImageIndex(Sender: TObject; Node: TTreeNode);
     procedure CopyFromBucketClick(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
+    procedure FormKeyDown(Sender: TObject; var Key: word; Shift: TShiftState);
     procedure InfoBtnClick(Sender: TObject);
     procedure SettingsBtnClick(Sender: TObject);
     procedure CopyFromPCClick(Sender: TObject);
     procedure DelBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
-    procedure FormKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
     procedure FormShow(Sender: TObject);
     procedure MkPCDirBtnClick(Sender: TObject);
     procedure RefreshBtnClick(Sender: TObject);
@@ -310,6 +310,21 @@ begin
     end;
 end;
 
+//Esc - отмена операций
+procedure TMainForm.FormKeyDown(Sender: TObject; var Key: word; Shift: TShiftState);
+begin
+  if key = VK_ESCAPE then
+  begin
+    //Если копирование выполняется - отменяем
+    if cmd <> '' then
+    begin
+      //    stop := True;
+      StartProcess('killall s3cmd');
+      SDMemo.Append('S3cmd-GUI: Esc - Cancel operation...');
+    end;
+  end;
+end;
+
 //Форма About
 procedure TMainForm.InfoBtnClick(Sender: TObject);
 begin
@@ -456,20 +471,6 @@ begin
     MkDir(GetUserDir + '.s3cmd-gui');
 
   IniPropStorage1.IniFileName := GetUserDir + '.s3cmd-gui/s3cmd-gui.conf';
-end;
-
-//Esc - отмена длительных операций
-procedure TMainForm.FormKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
-begin
-  if key = VK_ESCAPE then
-  begin
-    //Если копирование выполняется - отменяем
-    if cmd <> '' then
-    begin
-  //    stop := True;
-      StartProcess('killall s3cmd');
-    end;
-  end;
 end;
 
 procedure TMainForm.FormShow(Sender: TObject);

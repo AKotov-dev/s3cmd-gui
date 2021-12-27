@@ -131,12 +131,12 @@ begin
     MainForm.SDMemo.Lines.Append(Log[i]);
 
   //Если Esc - завершение/выход
-  if stop then
+ { if stop then
   begin
     stop := False;
     MainForm.StartProcess('killall s3cmd');
     MainForm.SDMemo.Append('s3cmd-gui: cancel operation...');
-  end;
+  end;}
 
   //Вывод пачками
   //  MainForm.SDMemo.Lines.Assign(Result);

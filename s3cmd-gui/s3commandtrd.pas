@@ -5,7 +5,7 @@ unit S3CommandTRD;
 interface
 
 uses
-  Classes, Process, SysUtils, ComCtrls, Dialogs;
+  Classes, Process, SysUtils, ComCtrls;
 
 type
   StartS3Command = class(TThread)
