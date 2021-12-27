@@ -85,8 +85,8 @@ begin
     //Запрещаем параллельное копирование
     CopyFromPC.Enabled := False;
     CopyFromBucket.Enabled := False;
-    AddBtn.Enabled := False;
     DelBtn.Enabled := False;
+    AddBtn.Enabled := False;
 
     //Метка отмены копирования
     Panel4.Caption := SCancelCopyng;
@@ -108,8 +108,8 @@ begin
     //Разрешаем копирование
     CopyFromPC.Enabled := True;
     CopyFromBucket.Enabled := True;
-    AddBtn.Enabled := True;
     DelBtn.Enabled := True;
+    AddBtn.Enabled := True;
 
     //Обновление каталогов назначения (выборочно)
     if left_panel then

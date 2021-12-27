@@ -70,7 +70,7 @@ type
   end;
 
 var
-  left_panel, stop: boolean;
+  left_panel: boolean;
   cmd: string;
 
 resourcestring
@@ -320,7 +320,7 @@ begin
     begin
       //    stop := True;
       StartProcess('killall s3cmd');
-      SDMemo.Append('S3cmd-GUI: Esc - Cancel operation...');
+      SDMemo.Append('S3cmd-GUI: Esc - Cancellation of the operation...');
     end;
   end;
 end;
@@ -461,7 +461,7 @@ begin
   //Очищаем переменную команды для потока
   cmd := '';
   //Флаг Esc - отмена операции
-  stop := False;
+  //stop := False;
 
   CompDir.Root := ExcludeTrailingPathDelimiter(GetUserDir);
   CompDir.Items.Item[0].Selected := True;
