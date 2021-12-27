@@ -49,7 +49,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
         <TopLine Value="461"/>
-        <CursorPos X="3" Y="464"/>
+        <CursorPos X="5" Y="469"/>
         <UsageCount Value="40"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -67,9 +67,10 @@
         <Filename Value="s3commandtrd.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="S3CommandTRD"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="3"/>
         <TopLine Value="113"/>
-        <CursorPos Y="139"/>
+        <CursorPos X="8" Y="139"/>
         <UsageCount Value="35"/>
         <Loaded Value="True"/>
       </Unit3>
@@ -79,9 +80,11 @@
         <ComponentName Value="ConfigForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="6"/>
         <CursorPos X="75" Y="8"/>
         <UsageCount Value="33"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="bucket_unit.pas"/>
@@ -89,9 +92,11 @@
         <ComponentName Value="BucketForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
+        <EditorIndex Value="5"/>
         <CursorPos X="53" Y="4"/>
         <UsageCount Value="31"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="about_unit.pas"/>
@@ -99,7 +104,6 @@
         <ComponentName Value="AboutForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="4"/>
         <CursorPos X="35" Y="7"/>
         <UsageCount Value="27"/>
