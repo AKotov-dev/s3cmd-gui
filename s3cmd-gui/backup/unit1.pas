@@ -17,7 +17,7 @@ type
     CompDir: TShellTreeView;
     SettingsBtn: TSpeedButton;
     CopyFromPC: TSpeedButton;
-    CopyFromSmartphone: TSpeedButton;
+    CopyFromBucket: TSpeedButton;
     DelBtn: TSpeedButton;
     AddBtn: TSpeedButton;
     GroupBox1: TGroupBox;
@@ -40,7 +40,7 @@ type
     UpBtn: TSpeedButton;
     procedure AddBtnClick(Sender: TObject);
     procedure CompDirGetImageIndex(Sender: TObject; Node: TTreeNode);
-    procedure CopyFromSmartphoneClick(Sender: TObject);
+    procedure CopyFromBucketClick(Sender: TObject);
     procedure FormCloseQuery(Sender: TObject; var CanClose: boolean);
     procedure InfoBtnClick(Sender: TObject);
     procedure SettingsBtnClick(Sender: TObject);
@@ -254,16 +254,12 @@ begin
 end;
 
 //Копирование из облака на комп
-procedure TMainForm.CopyFromSmartphoneClick(Sender: TObject);
+procedure TMainForm.CopyFromBucketClick(Sender: TObject);
 var
   i: integer;
   c: string;
   e: boolean;
 begin
-  //Если команда выполняется - следующую не запускать
-  if cmd <> '' then
-    exit;
-
   //Флаг выбора панели
   left_panel := True;
 
@@ -324,9 +320,6 @@ end;
 //Форма создания бакета
 procedure TMainForm.AddBtnClick(Sender: TObject);
 begin
-  //Если команда выполняется - следующую не запускать
-  if cmd <> '' then
-    exit;
   BucketForm := TBucketForm.Create(Application);
   BucketForm.ShowModal;
 end;
@@ -334,9 +327,6 @@ end;
 //Форма конфигурации ~/.s3cfg
 procedure TMainForm.SettingsBtnClick(Sender: TObject);
 begin
-  //Если команда выполняется - следующую не запускать
-  if cmd <> '' then
-    exit;
   ConfigForm := TConfigForm.Create(Application);
   ConfigForm.ShowModal;
 end;
@@ -348,10 +338,6 @@ var
   c: string;
   e: boolean;
 begin
-  //Если команда выполняется - следующую не запускать
-  if cmd <> '' then
-    exit;
-
   //Флаг выбора панели
   left_panel := False;
 
@@ -400,8 +386,7 @@ var
   i: integer;
   c: string; //сборка команд...
 begin
-  if (SDBox.Count = 0) or (cmd <> '') then
-    Exit;
+  if SDBox.Count = 0 then Exit;
 
   //Команда в поток
   cmd := '';

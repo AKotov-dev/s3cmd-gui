@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 287
+  Left = 288
   Height = 672
-  Top = 123
+  Top = 121
   Width = 1005
   ActiveControl = Splitter2
   Caption = 'S3cmd-GUI'
@@ -556,7 +556,7 @@ object MainForm: TMainForm
       Font.Name = 'Sans'
       ParentFont = False
       TabOrder = 1
-      object CopyFromSmartphone: TSpeedButton
+      object CopyFromBucket: TSpeedButton
         Left = 8
         Height = 40
         Hint = 'Copy to computer'
@@ -695,7 +695,7 @@ object MainForm: TMainForm
           605F5B33605F5B33605F5B33605F5B33605F5B33605F5B33605F5A32614C5F1F
           5F08000000000000000000000000000000000000000000000000
         }
-        OnClick = CopyFromSmartphoneClick
+        OnClick = CopyFromBucketClick
         ShowHint = True
         ParentShowHint = False
       end

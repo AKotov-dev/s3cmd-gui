@@ -86,13 +86,15 @@ msgstr "Создать новый бакет"
 msgid "S3cmd-GUI"
 msgstr ""
 
+#: tmainform.copyfrombucket.hint
+#, fuzzy
+msgctxt "tmainform.copyfrombucket.hint"
+msgid "Copy to computer"
+msgstr "Копировать на компьютер"
+
 #: tmainform.copyfrompc.hint
 msgid "Copy to bucket"
 msgstr "Копировать в бакет"
-
-#: tmainform.copyfromsmartphone.hint
-msgid "Copy to computer"
-msgstr "Копировать на компьютер"
 
 #: tmainform.delbtn.hint
 msgctxt "tmainform.delbtn.hint"

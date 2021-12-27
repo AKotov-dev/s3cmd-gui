@@ -81,10 +81,16 @@ begin
   with MainForm do
   begin
     SDMemo.Clear;
+
+    //Запрещаем параллельное копирование
+    CopyFromPC.Enabled := False;
+    CopyFromBucket.Enabled := False;
+    AddBtn.Enabled := False;
+    DelBtn.Enabled := False;
+
     //Метка отмены копирования
     Panel4.Caption := SCancelCopyng;
     ProgressBar1.Style := pbstMarquee;
-    //  ProgressBar1.Visible := True;
     ProgressBar1.Refresh;
   end;
 end;
@@ -96,9 +102,14 @@ begin
   begin
     //Метка отмены копирования
     Panel4.Caption := '';
-    //   ProgressBar1.Visible := False;
     ProgressBar1.Style := pbstNormal;
     ProgressBar1.Refresh;
+
+    //Разрешаем копирование
+    CopyFromPC.Enabled := True;
+    CopyFromBucket.Enabled := True;
+    AddBtn.Enabled := True;
+    DelBtn.Enabled := True;
 
     //Обновление каталогов назначения (выборочно)
     if left_panel then

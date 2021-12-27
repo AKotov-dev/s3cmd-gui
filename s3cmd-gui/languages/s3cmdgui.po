@@ -78,12 +78,13 @@ msgstr ""
 msgid "S3cmd-GUI"
 msgstr ""
 
-#: tmainform.copyfrompc.hint
-msgid "Copy to bucket"
+#: tmainform.copyfrombucket.hint
+msgctxt "tmainform.copyfrombucket.hint"
+msgid "Copy to computer"
 msgstr ""
 
-#: tmainform.copyfromsmartphone.hint
-msgid "Copy to computer"
+#: tmainform.copyfrompc.hint
+msgid "Copy to bucket"
 msgstr ""
 
 #: tmainform.delbtn.hint
