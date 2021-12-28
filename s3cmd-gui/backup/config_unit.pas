@@ -25,6 +25,7 @@ type
     Label4: TLabel;
     Label5: TLabel;
     procedure BitBtn1Click(Sender: TObject);
+    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
   private
 
@@ -47,6 +48,7 @@ procedure TConfigForm.BitBtn1Click(Sender: TObject);
 var
   S: TStringList;
 begin
+  //Обновить правую панель, если подключение состоялось
   left_panel := False;
 
   try
@@ -69,7 +71,12 @@ begin
   end;
 end;
 
-//Чтение параметров из ~/.s3cfg
+procedure TConfigForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
+begin
+  CloseAction := caFree;
+end;
+
+//Чтение параметров напрямую из ~/.s3cfg
 procedure TConfigForm.FormShow(Sender: TObject);
 var
   S: ansistring;

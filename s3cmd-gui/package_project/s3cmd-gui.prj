@@ -2,7 +2,7 @@
 name=s3cmd-gui
 
 [VERSION]
-version=0.4
+version=0.5
 
 [RELEASE]
 release=0.mrx8
@@ -70,11 +70,14 @@ toolversion=2.0.10
 [INFO]
 0=GUI for Command Line S3 Client (Amazon)
 1=
-2=v0.4
-3=+ warning about canceling copying when closing
-4=+ prohibition of parallel execution of tasks
-5=+ Esc - hard task cancellation
-6=
-7=v0.3 + output of progress to the log (--progress)
-8=
-9=v0.2 - initial release
+2=v0.5
+3=+ saving parameters directly to ~/.s3 cfg
+4=
+5=v0.4
+6=+ warning about canceling copying when closing
+7=+ prohibition of parallel execution of tasks
+8=+ Esc - hard task cancellation
+9=
+10=v0.3 + output of progress to the log (--progress)
+11=
+12=v0.2 - initial release

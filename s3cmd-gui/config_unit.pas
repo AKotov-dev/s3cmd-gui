@@ -48,8 +48,9 @@ procedure TConfigForm.BitBtn1Click(Sender: TObject);
 var
   S: TStringList;
 begin
+  //Обновить правую панель, если подключение состоялось
   left_panel := False;
-
+  //Делаем новый ~/.s3cfg и сохраняем
   try
     S := TStringList.Create;
     S.Add('[default]');
