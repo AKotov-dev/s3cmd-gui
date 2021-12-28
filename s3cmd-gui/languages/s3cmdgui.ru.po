@@ -73,8 +73,8 @@ msgstr ""
 
 #: tmainform.aclbtn.hint
 msgctxt "tmainform.aclbtn.hint"
-msgid "Public/Private (read)"
-msgstr "Публичный/Приватный (чтение)"
+msgid "Public/Private"
+msgstr "Публичный/Приватный"
 
 #: tmainform.addbtn.hint
 msgctxt "tmainform.addbtn.hint"
@@ -143,11 +143,9 @@ msgid "Upper level"
 msgstr "Верхний уровень"
 
 #: unit1.sbucketname
-#, fuzzy
-#| msgid "Name:"
 msgctxt "unit1.sbucketname"
 msgid "Bucket name:"
-msgstr "Имя:"
+msgstr "Имя Бакета:"
 
 #: unit1.scancelcopyng
 msgid "Esc - cancel... "
@@ -171,7 +169,7 @@ msgstr "Введите имя:"
 
 #: unit1.snewbucket
 msgid "Create new private Bucket"
-msgstr ""
+msgstr "Создать новый приватный Бакет"
 
 #: unit1.sobjectexists
 msgid "The folder already exists!"
@@ -188,4 +186,3 @@ msgstr "Приватный доступ [READ, recursive, --acl-private]"
 #: unit1.spublicaccess
 msgid "Public access [READ, recursive, --acl-public]"
 msgstr "Публичный доступ [READ, recursive, --acl-public]"
-

@@ -1592,7 +1592,7 @@ object MainForm: TMainForm
         AnchorSideTop.Control = Panel3
         Left = 228
         Height = 40
-        Hint = 'Public/Private (read)'
+        Hint = 'Public/Private'
         Top = 8
         Width = 40
         BorderSpacing.Top = 8

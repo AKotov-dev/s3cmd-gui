@@ -64,7 +64,7 @@ msgstr ""
 
 #: tmainform.aclbtn.hint
 msgctxt "tmainform.aclbtn.hint"
-msgid "Public/Private (read)"
+msgid "Public/Private"
 msgstr ""
 
 #: tmainform.addbtn.hint
