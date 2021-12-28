@@ -460,8 +460,6 @@ procedure TMainForm.FormCreate(Sender: TObject);
 begin
   //Очищаем переменную команды для потока
   cmd := '';
-  //Флаг Esc - отмена операции
-  //stop := False;
 
   CompDir.Root := ExcludeTrailingPathDelimiter(GetUserDir);
   CompDir.Items.Item[0].Selected := True;

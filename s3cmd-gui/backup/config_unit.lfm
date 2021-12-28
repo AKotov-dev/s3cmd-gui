@@ -1,12 +1,11 @@
 object ConfigForm: TConfigForm
-  Left = 359
+  Left = 294
   Height = 249
-  Top = 148
+  Top = 124
   Width = 548
   Caption = 'Configuration'
   ClientHeight = 249
   ClientWidth = 548
-  OnClose = FormClose
   OnShow = FormShow
   Position = poMainFormCenter
   LCLVersion = '2.0.10.0'

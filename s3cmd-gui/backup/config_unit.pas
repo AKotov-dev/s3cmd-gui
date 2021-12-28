@@ -5,8 +5,7 @@ unit config_unit;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons,
-  IniPropStorage;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons, Process;
 
 type
 
@@ -26,7 +25,6 @@ type
     Label4: TLabel;
     Label5: TLabel;
     procedure BitBtn1Click(Sender: TObject);
-    procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
   private
 
@@ -54,11 +52,11 @@ begin
   try
     S := TStringList.Create;
     S.Add('[default]');
-    S.Add('access_key = ' + Edit1.Text);
-    S.Add('secret_key = ' + Edit2.Text);
-    S.Add('bucket_location = ' + Edit3.Text);
-    S.Add('host_base = ' + Edit4.Text);
-    S.Add('host_bucket =' + Edit5.Text);
+    S.Add('access_key = ' + Trim(Edit1.Text));
+    S.Add('secret_key = ' + Trim(Edit2.Text));
+    S.Add('bucket_location = ' + Trim(Edit3.Text));
+    S.Add('host_base = ' + Trim(Edit4.Text));
+    S.Add('host_bucket = ' + Trim(Edit5.Text));
 
     S.SaveToFile(GetUserDir + '.s3cfg');
 
@@ -71,34 +69,33 @@ begin
   end;
 end;
 
-procedure TConfigForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
-begin
-  CloseAction := caFree;
-
-  //Если Ok = сохраняем настройки
-  if ModalResult = mrOk then
-    with MainForm.IniPropStorage1 do
-    begin
-      //    IniSection := 's3cmd'; //указываем секцию
-      WriteString('access_key', Edit1.Text);
-      WriteString('secret_key', Edit2.Text);
-      WriteString('bucket_location', Edit3.Text);
-      WriteString('host_base', Edit4.Text);
-      WriteString('host_bucket', Edit5.Text);
-    end;
-end;
-
-//Чтение параметров s3cmd
+//Чтение параметров из ~/.s3cfg
 procedure TConfigForm.FormShow(Sender: TObject);
+var
+  S: ansistring;
 begin
-  with MainForm.IniPropStorage1 do
+  if FileExists(GetUserDir + '.s3cfg') then
   begin
-    // IniSection := 's3cmd'; //указываем секцию
-    Edit1.Text := ReadString('access_key', '');
-    Edit2.Text := ReadString('secret_key', '');
-    Edit3.Text := ReadString('bucket_location', '');
-    Edit4.Text := ReadString('host_base', '');
-    Edit5.Text := ReadString('host_bucket', '');
+    if RunCommand('/bin/bash',
+      ['-c', 'grep "access_key = " ~/.s3cfg | sed "s/access_key = //"'], S) then
+      Edit1.Text := Trim(S);
+
+    if RunCommand('/bin/bash',
+      ['-c', 'grep "secret_key = " ~/.s3cfg | sed "s/secret_key = //"'], S) then
+      Edit2.Text := Trim(S);
+
+    if RunCommand('/bin/bash',
+      ['-c', 'grep "bucket_location = " ~/.s3cfg | sed "s/bucket_location = //"'],
+      S) then
+      Edit3.Text := Trim(S);
+
+    if RunCommand('/bin/bash',
+      ['-c', 'grep "host_base = " ~/.s3cfg | sed "s/host_base = //"'], S) then
+      Edit4.Text := Trim(S);
+
+    if RunCommand('/bin/bash',
+      ['-c', 'grep "host_bucket = " ~/.s3cfg | sed "s/host_bucket = //"'], S) then
+      Edit5.Text := Trim(S);
   end;
 end;
 
