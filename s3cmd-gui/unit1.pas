@@ -500,6 +500,10 @@ procedure TMainForm.FormShow(Sender: TObject);
 begin
   MainForm.Caption := Application.Title;
   IniPropStorage1.Restore;
+
+  Panel3.Height := CopyFromPC.Height + 14;
+  Panel4.Height := Panel3.Height;
+
   //Проверяем подключение выводим ошибки в SDMemo = StartLS (s3://)
   MainForm.CheckConnect;
 end;

@@ -1,7 +1,7 @@
 object MainForm: TMainForm
   Left = 286
   Height = 683
-  Top = 122
+  Top = 121
   Width = 1005
   ActiveControl = Splitter2
   Caption = 'S3cmd-GUI'
@@ -79,11 +79,15 @@ object MainForm: TMainForm
       ParentFont = False
       TabOrder = 1
       object CopyFromPC: TSpeedButton
+        AnchorSideLeft.Control = Panel4
+        AnchorSideTop.Control = Panel4
         Left = 8
         Height = 40
         Hint = 'Copy to bucket'
         Top = 8
         Width = 40
+        BorderSpacing.Left = 8
+        BorderSpacing.Top = 8
         Flat = True
         Glyph.Data = {
           36100000424D3610000000000000360000002800000020000000200000000100
@@ -222,11 +226,13 @@ object MainForm: TMainForm
         ParentShowHint = False
       end
       object MkPCDirBtn: TSpeedButton
+        AnchorSideTop.Control = Panel4
         Left = 56
         Height = 40
         Hint = 'Create new folder'
         Top = 8
         Width = 40
+        BorderSpacing.Top = 8
         Flat = True
         Glyph.Data = {
           36100000424D3610000000000000360000002800000020000000200000000100
@@ -365,11 +371,13 @@ object MainForm: TMainForm
         ParentShowHint = False
       end
       object RefreshBtn: TSpeedButton
+        AnchorSideTop.Control = Panel4
         Left = 104
         Height = 40
         Hint = 'Update'
         Top = 8
         Width = 40
+        BorderSpacing.Top = 8
         Flat = True
         Glyph.Data = {
           36100000424D3610000000000000360000002800000020000000200000000100
@@ -557,11 +565,15 @@ object MainForm: TMainForm
       ParentFont = False
       TabOrder = 1
       object CopyFromBucket: TSpeedButton
+        AnchorSideLeft.Control = Panel3
+        AnchorSideTop.Control = Panel3
         Left = 8
         Height = 40
         Hint = 'Copy to computer'
         Top = 8
         Width = 40
+        BorderSpacing.Left = 8
+        BorderSpacing.Top = 8
         Flat = True
         Glyph.Data = {
           36100000424D3610000000000000360000002800000020000000200000000100
@@ -700,11 +712,13 @@ object MainForm: TMainForm
         ParentShowHint = False
       end
       object SelectAllBtn: TSpeedButton
+        AnchorSideTop.Control = Panel3
         Left = 96
         Height = 40
         Hint = 'Select all (not buckets)'
         Top = 8
         Width = 40
+        BorderSpacing.Top = 8
         Flat = True
         Glyph.Data = {
           36100000424D3610000000000000360000002800000020000000200000000100
@@ -843,11 +857,13 @@ object MainForm: TMainForm
         ParentShowHint = False
       end
       object DelBtn: TSpeedButton
+        AnchorSideTop.Control = Panel3
         Left = 140
         Height = 40
         Hint = 'Delete Bucket/Files/Folders'
         Top = 8
         Width = 40
+        BorderSpacing.Top = 8
         Flat = True
         Glyph.Data = {
           36100000424D3610000000000000360000002800000020000000200000000100
@@ -986,11 +1002,13 @@ object MainForm: TMainForm
         ParentShowHint = False
       end
       object UpBtn: TSpeedButton
+        AnchorSideTop.Control = Panel3
         Left = 52
         Height = 40
         Hint = 'Upper level'
         Top = 8
         Width = 40
+        BorderSpacing.Top = 8
         Flat = True
         Glyph.Data = {
           36100000424D3610000000000000360000002800000020000000200000000100
@@ -1129,15 +1147,17 @@ object MainForm: TMainForm
         ParentShowHint = False
       end
       object SettingsBtn: TSpeedButton
+        AnchorSideTop.Control = Panel3
         AnchorSideRight.Control = Panel3
         AnchorSideRight.Side = asrBottom
-        Left = 448
+        Left = 450
         Height = 40
         Hint = 'Connection Settings'
         Top = 8
         Width = 40
         Anchors = [akTop, akRight]
-        BorderSpacing.Right = 10
+        BorderSpacing.Top = 8
+        BorderSpacing.Right = 8
         Flat = True
         Glyph.Data = {
           36100000424D3610000000000000360000002800000020000000200000000100
@@ -1276,11 +1296,13 @@ object MainForm: TMainForm
         ParentShowHint = False
       end
       object AddBtn: TSpeedButton
+        AnchorSideTop.Control = Panel3
         Left = 184
         Height = 40
         Hint = 'Create new bucket'
         Top = 8
         Width = 40
+        BorderSpacing.Top = 8
         Flat = True
         Glyph.Data = {
           36100000424D3610000000000000360000002800000020000000200000000100
@@ -1419,13 +1441,15 @@ object MainForm: TMainForm
         ParentShowHint = False
       end
       object InfoBtn: TSpeedButton
+        AnchorSideTop.Control = Panel3
         AnchorSideRight.Control = SettingsBtn
-        Left = 404
+        Left = 406
         Height = 40
         Hint = 'About'
         Top = 8
         Width = 40
         Anchors = [akTop, akRight]
+        BorderSpacing.Top = 8
         BorderSpacing.Right = 4
         Flat = True
         Glyph.Data = {
@@ -1565,11 +1589,13 @@ object MainForm: TMainForm
         ParentShowHint = False
       end
       object ACLBtn: TSpeedButton
+        AnchorSideTop.Control = Panel3
         Left = 228
         Height = 40
         Hint = 'Public/Private (read)'
         Top = 8
         Width = 40
+        BorderSpacing.Top = 8
         Flat = True
         Glyph.Data = {
           36100000424D3610000000000000360000002800000020000000200000000100

@@ -93,8 +93,7 @@ var
 
 implementation
 
-uses config_unit, about_unit, lsfoldertrd, S3CommandTRD,
-  FirstConnectTRD, acl_unit;
+uses config_unit, about_unit, lsfoldertrd, S3CommandTRD, FirstConnectTRD, acl_unit;
 
 {$R *.lfm}
 
@@ -501,6 +500,10 @@ procedure TMainForm.FormShow(Sender: TObject);
 begin
   MainForm.Caption := Application.Title;
   IniPropStorage1.Restore;
+
+  Panel3.Height := CopyFromPC.Height + 15;
+  Panel4.Height := Panel3.Height;
+
   //Проверяем подключение выводим ошибки в SDMemo = StartLS (s3://)
   MainForm.CheckConnect;
 end;
