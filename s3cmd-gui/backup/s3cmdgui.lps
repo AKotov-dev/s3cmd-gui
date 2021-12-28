@@ -48,9 +48,8 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="458"/>
-        <CursorPos X="67" Y="478"/>
+        <TopLine Value="92"/>
+        <CursorPos X="21" Y="106"/>
         <UsageCount Value="42"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -78,12 +77,10 @@
         <ComponentName Value="ConfigForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="47"/>
         <CursorPos Y="65"/>
         <UsageCount Value="35"/>
-        <Loaded Value="True"/>
-        <LoadedDesigner Value="True"/>
       </Unit4>
       <Unit5>
         <Filename Value="bucket_unit.pas"/>
@@ -91,9 +88,13 @@
         <ComponentName Value="BucketForm"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <EditorIndex Value="-1"/>
-        <CursorPos X="53" Y="4"/>
+        <IsVisibleTab Value="True"/>
+        <EditorIndex Value="1"/>
+        <TopLine Value="36"/>
+        <CursorPos X="41" Y="60"/>
         <UsageCount Value="33"/>
+        <Loaded Value="True"/>
+        <LoadedDesigner Value="True"/>
       </Unit5>
       <Unit6>
         <Filename Value="about_unit.pas"/>
@@ -109,11 +110,10 @@
         <Filename Value="firstconnecttrd.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="FirstConnectTRD"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="-1"/>
         <TopLine Value="45"/>
         <CursorPos X="41" Y="48"/>
         <UsageCount Value="25"/>
-        <Loaded Value="True"/>
       </Unit7>
       <Unit8>
         <Filename Value="lssdfoldertrd.pas"/>
@@ -138,55 +138,23 @@
         <UsageCount Value="10"/>
       </Unit10>
     </Units>
-    <JumpHistory Count="12" HistoryIndex="11">
+    <JumpHistory Count="4" HistoryIndex="3">
       <Position1>
-        <Filename Value="config_unit.pas"/>
-        <Caret Line="82" Column="5" TopLine="49"/>
-      </Position1>
-      <Position2>
-        <Filename Value="config_unit.pas"/>
-        <Caret Line="81" Column="5" TopLine="50"/>
-      </Position2>
-      <Position3>
-        <Filename Value="config_unit.pas"/>
-        <Caret Line="99" Column="10" TopLine="78"/>
-      </Position3>
-      <Position4>
-        <Filename Value="config_unit.pas"/>
-        <Caret Line="98" Column="62" TopLine="82"/>
-      </Position4>
-      <Position5>
-        <Filename Value="config_unit.pas"/>
-        <Caret Line="96" Column="19" TopLine="82"/>
-      </Position5>
-      <Position6>
-        <Filename Value="config_unit.pas"/>
-        <Caret Line="117" TopLine="92"/>
-      </Position6>
-      <Position7>
-        <Filename Value="config_unit.pas"/>
-        <Caret Line="60" Column="26" TopLine="51"/>
-      </Position7>
-      <Position8>
         <Filename Value="unit1.pas"/>
         <Caret Line="463" TopLine="448"/>
-      </Position8>
-      <Position9>
+      </Position1>
+      <Position2>
         <Filename Value="unit1.pas"/>
         <Caret Line="346" Column="73" TopLine="342"/>
-      </Position9>
-      <Position10>
+      </Position2>
+      <Position3>
         <Filename Value="unit1.pas"/>
         <Caret Line="106" Column="21" TopLine="101"/>
-      </Position10>
-      <Position11>
-        <Filename Value="config_unit.pas"/>
-        <Caret Line="53" Column="59" TopLine="47"/>
-      </Position11>
-      <Position12>
-        <Filename Value="config_unit.pas"/>
-        <Caret Line="67" TopLine="76"/>
-      </Position12>
+      </Position3>
+      <Position4>
+        <Filename Value="bucket_unit.pas"/>
+        <Caret Line="4" Column="53"/>
+      </Position4>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

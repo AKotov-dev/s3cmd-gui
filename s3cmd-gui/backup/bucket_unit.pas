@@ -54,7 +54,11 @@ begin
     cmd := 's3cmd mb s3://' + Edit1.Text + '; s3cmd setacl s3://' +
       Edit1.Text + '/  --acl-private';
 
+  left_panel := False;
+  //Создаём новый бакет
   MainForm.StartCmd;
+  //Показываем список бакетов
+  MainForm.ReadS3Root;
 end;
 
 procedure TBucketForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
