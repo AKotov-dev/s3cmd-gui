@@ -1,7 +1,7 @@
 object BucketForm: TBucketForm
-  Left = 380
+  Left = 359
   Height = 100
-  Top = 269
+  Top = 151
   Width = 457
   ActiveControl = Edit1
   Caption = 'Create a new bucket'

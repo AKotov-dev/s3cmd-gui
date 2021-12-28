@@ -14,6 +14,7 @@ type
   { TMainForm }
 
   TMainForm = class(TForm)
+    ACLBtn: TSpeedButton;
     CompDir: TShellTreeView;
     SettingsBtn: TSpeedButton;
     CopyFromPC: TSpeedButton;
@@ -38,6 +39,7 @@ type
     Splitter1: TSplitter;
     Splitter2: TSplitter;
     UpBtn: TSpeedButton;
+    procedure ACLBtnClick(Sender: TObject);
     procedure AddBtnClick(Sender: TObject);
     procedure CompDirGetImageIndex(Sender: TObject; Node: TTreeNode);
     procedure CopyFromBucketClick(Sender: TObject);
@@ -81,13 +83,17 @@ resourcestring
   SInputName = 'Enter the name:';
   SCancelCopyng = 'Esc - cancel... ';
   SCloseQuery = 'Copying is in progress! Finish the process?';
+  SPublicAccess = 'Public access [READ, recursive, --acl-public]';
+  SPrivateAccess = 'Private access [READ, recursive, --acl-private]';
+  SNewBucket = 'Create new private Bucket';
+  SBucketName = 'Bucket name:';
 
 var
   MainForm: TMainForm;
 
 implementation
 
-uses config_unit, bucket_unit, about_unit, lsfoldertrd, S3CommandTRD, FirstConnectTRD;
+uses config_unit, about_unit, lsfoldertrd, S3CommandTRD, FirstConnectTRD, acl_unit;
 
 {$R *.lfm}
 
@@ -332,11 +338,30 @@ begin
   AboutForm.ShowModal;
 end;
 
-//Форма создания бакета
+//Создание нового бакета
 procedure TMainForm.AddBtnClick(Sender: TObject);
+var
+  S: string;
 begin
-  BucketForm := TBucketForm.Create(Application);
-  BucketForm.ShowModal;
+  S := '';
+  repeat
+    if not InputQuery(SNewBucket, SBucketName, S) then
+      Exit
+  until S <> '';
+
+  cmd := 's3cmd mb s3://' + Trim(S) + '; s3cmd setacl s3://' + Trim(S) +
+    '/  --acl-private';
+
+  left_panel := False;
+
+  //Создаём новый бакет и показываем список бакетов 's3://'
+  MainForm.GroupBox2.Caption := 's3://';
+  MainForm.StartCmd;
+end;
+
+procedure TMainForm.ACLBtnClick(Sender: TObject);
+begin
+  ACLForm.ShowModal;
 end;
 
 //Форма конфигурации ~/.s3cfg

@@ -55,10 +55,10 @@ begin
       Edit1.Text + '/  --acl-private';
 
   left_panel := False;
-  //Создаём новый бакет
+
+  //Создаём новый бакет и показываем список бакетов 's3://'
+  MainForm.GroupBox2.Caption := 's3://';
   MainForm.StartCmd;
-  //Показываем список бакетов
-  MainForm.ReadS3Root;
 end;
 
 procedure TBucketForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);

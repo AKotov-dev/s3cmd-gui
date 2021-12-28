@@ -87,6 +87,7 @@ begin
     CopyFromBucket.Enabled := False;
     DelBtn.Enabled := False;
     AddBtn.Enabled := False;
+    ACLBtn.Enabled := False;
 
     //Метка отмены копирования
     Panel4.Caption := SCancelCopyng;
@@ -110,6 +111,7 @@ begin
     CopyFromBucket.Enabled := True;
     DelBtn.Enabled := True;
     AddBtn.Enabled := True;
+    ACLBtn.Enabled := True;
 
     //Обновление каталогов назначения (выборочно)
     if left_panel then

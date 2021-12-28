@@ -43,17 +43,9 @@ msgstr ""
 "\n"
 "Russian Linux Forum: https://linuxforum.ru\n"
 
-#: tbucketform.caption
-msgid "Create a new bucket"
-msgstr "Создать новый бакет"
-
-#: tbucketform.checkbox1.caption
-msgid "Public/Private"
-msgstr "Публичный /Приватный"
-
-#: tbucketform.label1.caption
-msgid "Name:"
-msgstr "Имя:"
+#: taclform.caption
+msgid "ACL"
+msgstr ""
 
 #: tconfigform.caption
 msgid "Configuration"
@@ -78,6 +70,11 @@ msgstr ""
 #: tconfigform.label5.caption
 msgid "host_bucket ="
 msgstr ""
+
+#: tmainform.aclbtn.hint
+msgctxt "tmainform.aclbtn.hint"
+msgid "Public/Private (read)"
+msgstr "Публичный/Приватный (чтение)"
 
 #: tmainform.addbtn.hint
 msgctxt "tmainform.addbtn.hint"
@@ -145,6 +142,13 @@ msgstr "Настройки подключения"
 msgid "Upper level"
 msgstr "Верхний уровень"
 
+#: unit1.sbucketname
+#, fuzzy
+#| msgid "Name:"
+msgctxt "unit1.sbucketname"
+msgid "Bucket name:"
+msgstr "Имя:"
+
 #: unit1.scancelcopyng
 msgid "Esc - cancel... "
 msgstr "Esc - отмена... "
@@ -165,6 +169,10 @@ msgstr "Удалить выбранный объект(ы)?"
 msgid "Enter the name:"
 msgstr "Введите имя:"
 
+#: unit1.snewbucket
+msgid "Create new private Bucket"
+msgstr ""
+
 #: unit1.sobjectexists
 msgid "The folder already exists!"
 msgstr "Каталог уже существует!"
@@ -172,3 +180,12 @@ msgstr "Каталог уже существует!"
 #: unit1.soverwriteobject
 msgid "Overwrite existing objects?"
 msgstr "Перезаписать существующие объекты?"
+
+#: unit1.sprivateaccess
+msgid "Private access [READ, recursive, --acl-private]"
+msgstr "Приватный доступ [READ, recursive, --acl-private]"
+
+#: unit1.spublicaccess
+msgid "Public access [READ, recursive, --acl-public]"
+msgstr "Публичный доступ [READ, recursive, --acl-public]"
+

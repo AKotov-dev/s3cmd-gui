@@ -34,16 +34,8 @@ msgid ""
 "Russian Linux Forum: https://linuxforum.ru\n"
 msgstr ""
 
-#: tbucketform.caption
-msgid "Create a new bucket"
-msgstr ""
-
-#: tbucketform.checkbox1.caption
-msgid "Public/Private"
-msgstr ""
-
-#: tbucketform.label1.caption
-msgid "Name:"
+#: taclform.caption
+msgid "ACL"
 msgstr ""
 
 #: tconfigform.caption
@@ -68,6 +60,11 @@ msgstr ""
 
 #: tconfigform.label5.caption
 msgid "host_bucket ="
+msgstr ""
+
+#: tmainform.aclbtn.hint
+msgctxt "tmainform.aclbtn.hint"
+msgid "Public/Private (read)"
 msgstr ""
 
 #: tmainform.addbtn.hint
@@ -136,6 +133,11 @@ msgstr ""
 msgid "Upper level"
 msgstr ""
 
+#: unit1.sbucketname
+msgctxt "unit1.sbucketname"
+msgid "Bucket name:"
+msgstr ""
+
 #: unit1.scancelcopyng
 msgid "Esc - cancel... "
 msgstr ""
@@ -156,11 +158,23 @@ msgstr ""
 msgid "Enter the name:"
 msgstr ""
 
+#: unit1.snewbucket
+msgid "Create new private Bucket"
+msgstr ""
+
 #: unit1.sobjectexists
 msgid "The folder already exists!"
 msgstr ""
 
 #: unit1.soverwriteobject
 msgid "Overwrite existing objects?"
+msgstr ""
+
+#: unit1.sprivateaccess
+msgid "Private access [READ, recursive, --acl-private]"
+msgstr ""
+
+#: unit1.spublicaccess
+msgid "Public access [READ, recursive, --acl-public]"
 msgstr ""
 
