@@ -5,7 +5,7 @@ unit FirstConnectTRD;
 interface
 
 uses
-  Classes, Process, SysUtils, Forms, Controls;
+  Classes, Process, SysUtils, Forms;
 
 type
   StartFirstConnect = class(TThread)
@@ -36,8 +36,6 @@ var
   ExProcess: TProcess;
 begin
   try
- //   Synchronize(@ShowProgress);
-
     S := TStringList.Create;
     FreeOnTerminate := True; //Уничтожить по завершении
 
@@ -55,7 +53,6 @@ begin
     Synchronize(@UpdateSDMemo);
 
   finally
- //   Synchronize(@HideProgress);
     S.Free;
     ExProcess.Free;
     Terminate;
@@ -67,6 +64,12 @@ procedure StartFirstConnect.UpdateSDMemo;
 begin
   MainForm.SDMemo.Lines.Assign(S);
   MainForm.SDMemo.Refresh;
+
+  //Если в выводе нет 'error' - прочитать и вывести корень 's3://'
+  if Pos('error', LowerCase(S.Text)) <> 0 then
+    MainForm.SDBox.Clear
+  else
+    MainForm.ReadS3Root;
 end;
 
 

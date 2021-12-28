@@ -478,7 +478,7 @@ begin
   //Проверяем подключение выводим ошибки в SDMemo
   MainForm.CheckConnect;
   //Указатель в корень (s3://) и перечитываем
-  MainForm.ReadS3Root;
+//  MainForm.ReadS3Root;
 end;
 
 //Создать каталог на компе

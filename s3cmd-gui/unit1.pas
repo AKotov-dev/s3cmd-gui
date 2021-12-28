@@ -475,10 +475,8 @@ procedure TMainForm.FormShow(Sender: TObject);
 begin
   MainForm.Caption := Application.Title;
   IniPropStorage1.Restore;
-  //Проверяем подключение выводим ошибки в SDMemo
+  //Проверяем подключение выводим ошибки в SDMemo = StartLS (s3://)
   MainForm.CheckConnect;
-  //Указатель в корень (s3://) и перечитываем
-  MainForm.ReadS3Root;
 end;
 
 //Создать каталог на компе

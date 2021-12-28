@@ -45,7 +45,7 @@ begin
     ExProcess.Parameters.Add('-c');
 
     //Выводим ошибки подключения в SDMemo
-    ExProcess.Options := [poUsePipes, poStderrToOutPut];
+    ExProcess.Options := [poWaitOnExit, poUsePipes, poStderrToOutPut];
     ExProcess.Parameters.Add('s3cmd ls >/dev/null');
     ExProcess.Execute;
 
@@ -64,6 +64,12 @@ procedure StartFirstConnect.UpdateSDMemo;
 begin
   MainForm.SDMemo.Lines.Assign(S);
   MainForm.SDMemo.Refresh;
+
+  //Если в выводе нет 'error' - прочитать и вывести корень 's3://'
+  if Pos('error', LowerCase(S.Text)) <> 0 then
+    MainForm.SDBox.Clear
+  else
+    MainForm.ReadS3Root;
 end;
 
 

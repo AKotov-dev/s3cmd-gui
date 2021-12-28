@@ -64,8 +64,6 @@ begin
 
     //Проверяем подключение выводим ошибки в SDMemo
     MainForm.CheckConnect;
-    //Указатель в корень (s3://) и перечитываем
-    MainForm.ReadS3Root;
   finally
     S.Free;
   end;

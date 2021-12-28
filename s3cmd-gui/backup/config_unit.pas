@@ -50,7 +50,7 @@ var
 begin
   //Обновить правую панель, если подключение состоялось
   left_panel := False;
-
+  //Делаем новый ~/.s3cfg и сохраняем
   try
     S := TStringList.Create;
     S.Add('[default]');
@@ -62,10 +62,10 @@ begin
 
     S.SaveToFile(GetUserDir + '.s3cfg');
 
+    //Если повторный ввод - сбрасываем предыдущий поток
+    //MainForm.StartProcess('killall s3cmd');
     //Проверяем подключение выводим ошибки в SDMemo
     MainForm.CheckConnect;
-    //Указатель в корень (s3://) и перечитываем
-    MainForm.ReadS3Root;
   finally
     S.Free;
   end;
