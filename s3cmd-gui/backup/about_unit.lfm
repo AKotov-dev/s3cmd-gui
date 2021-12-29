@@ -1,11 +1,11 @@
 object AboutForm: TAboutForm
-  Left = 538
-  Height = 248
-  Top = 298
+  Left = 361
+  Height = 261
+  Top = 154
   Width = 442
   ActiveControl = BitBtn1
   Caption = 'About'
-  ClientHeight = 248
+  ClientHeight = 261
   ClientWidth = 442
   OnClose = FormClose
   OnShow = FormShow
@@ -211,8 +211,8 @@ object AboutForm: TAboutForm
     Left = 156
     Height = 135
     Top = 40
-    Width = 253
-    Caption = 'GUI for Command Line S3 Client'#10#10'License: GPLv3'#10'Compilation: Lazarus 2.0.10'#10'Author: alex_q_2000 (C) 2021'#10'Grantitudes: Florent Viard + Co (GitHub)'#10#10#10'Russian Linux Forum: https://linuxforum.ru'
+    Width = 276
+    Caption = 'GUI for Command Line S3 Client'#10#10'License: GPLv3'#10'Compilation: Lazarus 2.0.10'#10'Author: alex_q_2000 (C) 2021'#10'Grantitudes: Michal Ludvig + Co (GitHub)'#10'Jani Välimaa, Lewis Smith (Mageia Linux Team)'#10#10'Russian Linux Forum: https://linuxforum.ru'
     ParentColor = False
   end
   object Bevel1: TBevel
