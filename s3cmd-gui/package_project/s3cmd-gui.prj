@@ -11,7 +11,7 @@ release=0.mrx8
 group=Applications/Internet
 
 [DESCRIPTION]
-0=GUI for Command Line S3 Client (Amazon)
+0=GUI for Command line tool for managing Amazon S3
 1=---
 2=More information: /usr/share/doc/package_name/repack.txt
 
@@ -22,7 +22,7 @@ maintainer=Alex Kotov
 vendor=alex_q_2000 (C) 2021
 
 [SUMMARY]
-summary=GUI for Command Line S3 Client (Amazon)
+summary=GUI for Command line tool for managing Amazon S3
 
 [URLCOPY]
 urlcopy=https://github.com/AKotov-dev/s3cmd-gui
