@@ -1,5 +1,5 @@
 # S3cmd-GUI
-GUI for Command Line S3 Client (Amazon). 
+GUI for Command line tool for managing Amazon S3: https://github.com/s3tools/s3cmd  
 
 Mageia Linux lacks the `s3cmd` rpm package. Before installing `s3cmd-gui`, download and install the s3cmd rpm package from the `s3cmd-rpm` folder.
 
