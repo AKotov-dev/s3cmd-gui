@@ -80,7 +80,7 @@ procedure StartS3Command.StartProgress;
 begin
   with MainForm do
   begin
-    SDMemo.Clear;
+    LogMemo.Clear;
 
     //Запрещаем параллельное копирование
     CopyFromPC.Enabled := False;
@@ -130,7 +130,7 @@ var
 begin
   //Вывод построчно
   for i := 0 to Log.Count - 1 do
-    MainForm.SDMemo.Lines.Append(Log[i]);
+    MainForm.LogMemo.Lines.Append(Log[i]);
 
   //Если Esc - завершение/выход
  { if stop then

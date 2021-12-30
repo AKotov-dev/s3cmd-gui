@@ -116,10 +116,6 @@ msgstr ""
 msgid "Panel2"
 msgstr ""
 
-#: tmainform.refreshbtn.hint
-msgid "Update"
-msgstr ""
-
 #: tmainform.selectallbtn.hint
 msgid "Select all (not buckets)"
 msgstr ""
@@ -131,6 +127,11 @@ msgstr ""
 
 #: tmainform.upbtn.hint
 msgid "Upper level"
+msgstr ""
+
+#: tmainform.updatebtn.hint
+msgctxt "tmainform.updatebtn.hint"
+msgid "Update"
 msgstr ""
 
 #: unit1.sbucketname

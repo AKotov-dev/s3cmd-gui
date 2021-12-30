@@ -5,7 +5,7 @@ unit S3CommandTRD;
 interface
 
 uses
-  Classes, Process, SysUtils, ComCtrls;
+  Classes, Process, SysUtils;
 
 type
   StartS3Command = class(TThread)
@@ -80,13 +80,14 @@ procedure StartS3Command.StartProgress;
 begin
   with MainForm do
   begin
-    SDMemo.Clear;
+    LogMemo.Clear;
 
     //Запрещаем параллельное копирование
     CopyFromPC.Enabled := False;
     CopyFromBucket.Enabled := False;
     DelBtn.Enabled := False;
     AddBtn.Enabled := False;
+    ACLBtn.Enabled := False;
 
     //Метка отмены копирования
     Panel4.Caption := SCancelCopyng;
@@ -110,6 +111,7 @@ begin
     CopyFromBucket.Enabled := True;
     DelBtn.Enabled := True;
     AddBtn.Enabled := True;
+    ACLBtn.Enabled := True;
 
     //Обновление каталогов назначения (выборочно)
     if left_panel then
@@ -128,7 +130,7 @@ var
 begin
   //Вывод построчно
   for i := 0 to Log.Count - 1 do
-    MainForm.SDMemo.Lines.Append(Log[i]);
+    MainForm.LogMemo.Lines.Append(Log[i]);
 
   //Если Esc - завершение/выход
  { if stop then

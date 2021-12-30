@@ -1,7 +1,7 @@
 object MainForm: TMainForm
-  Left = 286
+  Left = 294
   Height = 683
-  Top = 121
+  Top = 124
   Width = 1005
   ActiveControl = Splitter2
   Caption = 'S3cmd-GUI'
@@ -370,7 +370,7 @@ object MainForm: TMainForm
         ShowHint = True
         ParentShowHint = False
       end
-      object RefreshBtn: TSpeedButton
+      object UpdateBtn: TSpeedButton
         AnchorSideTop.Control = Panel4
         Left = 104
         Height = 40
@@ -511,7 +511,7 @@ object MainForm: TMainForm
           FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFF
           FF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00FFFFFF00
         }
-        OnClick = RefreshBtnClick
+        OnClick = UpdateBtnClick
         ShowHint = True
         ParentShowHint = False
       end
@@ -1755,7 +1755,7 @@ object MainForm: TMainForm
     ClientHeight = 76
     ClientWidth = 1005
     TabOrder = 4
-    object SDMemo: TMemo
+    object LogMemo: TMemo
       AnchorSideTop.Control = Panel1
       AnchorSideBottom.Control = ProgressBar1
       Left = 2
@@ -1772,7 +1772,7 @@ object MainForm: TMainForm
       WantReturns = False
     end
     object ProgressBar1: TProgressBar
-      AnchorSideTop.Control = SDMemo
+      AnchorSideTop.Control = LogMemo
       AnchorSideBottom.Control = Panel1
       AnchorSideBottom.Side = asrBottom
       Left = 0
@@ -1794,14 +1794,14 @@ object MainForm: TMainForm
   end
   object IniPropStorage1: TIniPropStorage
     StoredValues = <>
-    Left = 604
-    Top = 148
+    Left = 552
+    Top = 104
   end
   object ImageList1: TImageList
     Height = 22
     Width = 22
-    Left = 700
-    Top = 148
+    Left = 648
+    Top = 104
     Bitmap = {
       4C69020000001600000016000000000000000000000000000000000000000000
       0000000000000000000000000000000000000000000000000000000000000000

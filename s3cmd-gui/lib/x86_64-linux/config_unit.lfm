@@ -130,7 +130,7 @@ object ConfigForm: TConfigForm
     BorderSpacing.Right = 8
     TabOrder = 4
   end
-  object BitBtn1: TBitBtn
+  object OkBtn: TBitBtn
     AnchorSideRight.Control = Owner
     AnchorSideRight.Side = asrBottom
     Left = 430
@@ -143,11 +143,11 @@ object ConfigForm: TConfigForm
     DefaultCaption = True
     Kind = bkOK
     ModalResult = 1
-    OnClick = BitBtn1Click
+    OnClick = OkBtnClick
     TabOrder = 5
   end
-  object BitBtn2: TBitBtn
-    AnchorSideRight.Control = BitBtn1
+  object CloseBtn: TBitBtn
+    AnchorSideRight.Control = OkBtn
     Left = 318
     Height = 35
     Top = 208

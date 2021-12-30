@@ -31,9 +31,9 @@ type
     Panel3: TPanel;
     Panel4: TPanel;
     ProgressBar1: TProgressBar;
-    RefreshBtn: TSpeedButton;
+    UpdateBtn: TSpeedButton;
     SDBox: TListBox;
-    SDMemo: TMemo;
+    LogMemo: TMemo;
     SelectAllBtn: TSpeedButton;
     InfoBtn: TSpeedButton;
     Splitter1: TSplitter;
@@ -52,7 +52,7 @@ type
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure MkPCDirBtnClick(Sender: TObject);
-    procedure RefreshBtnClick(Sender: TObject);
+    procedure UpdateBtnClick(Sender: TObject);
     procedure CompDirUpdate;
     procedure SDBoxDblClick(Sender: TObject);
     procedure SDBoxDrawItem(Control: TWinControl; Index: integer;
@@ -175,16 +175,21 @@ var
   i: integer; //Абсолютный индекс выделенного
   d: string; //Выделенная директория
 begin
-  //Запоминаем позицию курсора
-  i := CompDir.Selected.AbsoluteIndex;
-  d := ExtractFilePath(CompDir.GetPathFromNode(CompDir.Selected));
+  try
+    //Запоминаем позицию курсора
+    i := CompDir.Selected.Index;// .AbsoluteIndex;
+    d := ExtractFilePath(CompDir.GetPathFromNode(CompDir.Selected));
 
-  //Обновляем  выбранного родителя
-  CompDir.Refresh(CompDir.Selected.Parent);
-  //Возвращаем курсор на исходную
-  CompDir.Path := d;
-  CompDir.Select(CompDir.Items[i]);
-  CompDir.SetFocus;
+    //Обновляем  выбранного родителя
+    with CompDir do
+      Refresh(Selected.Parent);
+
+    //Возвращаем курсор на исходную
+    CompDir.Path := d;
+    CompDir.Select(CompDir.Items[i]);
+    CompDir.SetFocus;
+  except;
+  end;
 end;
 
 procedure TMainForm.SDBoxDblClick(Sender: TObject);
@@ -287,7 +292,7 @@ begin
             e := True;
 
         c := 's3cmd get --progress --recursive --force ' + '''' +
-          GroupBox2.Caption + SDBox.Items[i] + '''' + ' ' + '''' +
+          ExcludeTrailingPathDelimiter(GroupBox2.Caption + SDBox.Items[i]) + '''' + ' ' + '''' +
           ExtractFilePath(CompDir.GetPathFromNode(CompDir.Selected)) + '''';
 
         cmd := c + '; ' + cmd;
@@ -326,7 +331,7 @@ begin
     begin
       //    stop := True;
       StartProcess('killall s3cmd');
-      SDMemo.Append('S3cmd-GUI: Esc - Cancellation of the operation...');
+      LogMemo.Append('S3cmd-GUI: Esc - Cancellation of the operation...');
     end;
   end;
 end;
@@ -361,7 +366,8 @@ end;
 
 procedure TMainForm.ACLBtnClick(Sender: TObject);
 begin
-  ACLForm.ShowModal;
+  if SDBox.SelCount <> 0 then
+    ACLForm.ShowModal;
 end;
 
 //Форма конфигурации ~/.s3cfg
@@ -504,7 +510,7 @@ begin
   Panel3.Height := CopyFromPC.Height + 14;
   Panel4.Height := Panel3.Height;
 
-  //Проверяем подключение выводим ошибки в SDMemo = StartLS (s3://)
+  //Проверяем подключение выводим ошибки в LogMemo = StartLS (s3://)
   MainForm.CheckConnect;
 end;
 
@@ -538,7 +544,7 @@ begin
 end;
 
 //Перечитываем папку на компе
-procedure TMainForm.RefreshBtnClick(Sender: TObject);
+procedure TMainForm.UpdateBtnClick(Sender: TObject);
 begin
   with CompDir do
   begin

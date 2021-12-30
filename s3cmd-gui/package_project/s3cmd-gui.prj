@@ -2,7 +2,7 @@
 name=s3cmd-gui
 
 [VERSION]
-version=0.5
+version=1.0
 
 [RELEASE]
 release=0.mrx8
@@ -59,7 +59,7 @@ url32=https://github.com/AKotov-dev/s3cmd-gui
 url64=
 
 [PROGRAMNAME]
-programname=s3cmd-gui
+programname=S3cmd-GUI
 
 [DEVTOOL]
 devtool=Lazarus
@@ -70,16 +70,21 @@ toolversion=2.0.10
 [INFO]
 0=GUI for Command Line S3 Client (Amazon)
 1=
-2=v0.5
-3=+ saving parameters directly to ~/.s3cfg
-4=+ changed the control of the first connection
-5=+ public and private access to objects
+2=v1.0
+3=+ showing the ACL form if there is an object
+4=+ fixing copying directories from the cloud
+5=+ final release
 6=
-7=v0.4
-8=+ warning about canceling copying when closing
-9=+ prohibition of parallel execution of tasks
-10=+ Esc - hard task cancellation
+7=v0.5
+8=+ saving parameters directly to ~/.s3cfg
+9=+ changed the control of the first connection
+10=+ public and private access to objects
 11=
-12=v0.3 + output of progress to the log (--progress)
-13=
-14=v0.2 - initial release
+12=v0.4
+13=+ warning about canceling copying when closing
+14=+ prohibition of parallel execution of tasks
+15=+ Esc - hard task cancellation
+16=
+17=v0.3 + output of progress to the log (--progress)
+18=
+19=v0.2 - initial release

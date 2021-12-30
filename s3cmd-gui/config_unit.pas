@@ -12,8 +12,8 @@ type
   { TConfigForm }
 
   TConfigForm = class(TForm)
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
+    OkBtn: TBitBtn;
+    CloseBtn: TBitBtn;
     Edit1: TEdit;
     Edit2: TEdit;
     Edit3: TEdit;
@@ -24,7 +24,7 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
-    procedure BitBtn1Click(Sender: TObject);
+    procedure OkBtnClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
   private
@@ -44,7 +44,7 @@ uses unit1;
 
 { TConfigForm }
 
-procedure TConfigForm.BitBtn1Click(Sender: TObject);
+procedure TConfigForm.OkBtnClick(Sender: TObject);
 var
   S: TStringList;
 begin
@@ -62,7 +62,7 @@ begin
 
     S.SaveToFile(GetUserDir + '.s3cfg');
 
-    //Проверяем подключение выводим ошибки в SDMemo
+    //Проверяем подключение выводим ошибки в LogMemo
     MainForm.CheckConnect;
   finally
     S.Free;

@@ -40,10 +40,10 @@ object ACLForm: TACLForm
     )
     TabOrder = 0
   end
-  object BitBtn2: TBitBtn
-    AnchorSideTop.Control = BitBtn1
-    AnchorSideRight.Control = BitBtn1
-    AnchorSideBottom.Control = BitBtn1
+  object CloseBtn: TBitBtn
+    AnchorSideTop.Control = OkBtn
+    AnchorSideRight.Control = OkBtn
+    AnchorSideBottom.Control = OkBtn
     AnchorSideBottom.Side = asrBottom
     Left = 212
     Height = 35
@@ -56,7 +56,7 @@ object ACLForm: TACLForm
     ModalResult = 11
     TabOrder = 1
   end
-  object BitBtn1: TBitBtn
+  object OkBtn: TBitBtn
     AnchorSideTop.Control = RadioGroup1
     AnchorSideTop.Side = asrBottom
     AnchorSideRight.Side = asrBottom
@@ -70,7 +70,7 @@ object ACLForm: TACLForm
     DefaultCaption = True
     Kind = bkOK
     ModalResult = 1
-    OnClick = BitBtn1Click
+    OnClick = OkBtnClick
     TabOrder = 2
   end
 end

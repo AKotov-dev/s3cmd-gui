@@ -5,7 +5,7 @@ unit FirstConnectTRD;
 interface
 
 uses
-  Classes, Process, SysUtils, Forms;
+  Classes, Process, SysUtils;
 
 type
   StartFirstConnect = class(TThread)
@@ -18,8 +18,8 @@ type
 
     procedure Execute; override;
 
-    //Перечитываем текущую директорию SD-Card
-    procedure UpdateSDMemo;
+    //Выводим лог
+    procedure UpdateLogMemo;
 
   end;
 
@@ -30,7 +30,7 @@ uses unit1;
 
 { TRD }
 
-//Апдейт текущего каталога SDBox
+//Пробный s3cmd ls
 procedure StartFirstConnect.Execute;
 var
   ExProcess: TProcess;
@@ -44,13 +44,13 @@ begin
     ExProcess.Executable := 'bash';
     ExProcess.Parameters.Add('-c');
 
-    //Выводим ошибки подключения в SDMemo
+    //Выводим ошибки подключения в LogMemo
     ExProcess.Options := [poUsePipes, poStderrToOutPut];
     ExProcess.Parameters.Add('s3cmd ls >/dev/null');
     ExProcess.Execute;
 
     S.LoadFromStream(ExProcess.Output);
-    Synchronize(@UpdateSDMemo);
+    Synchronize(@UpdateLogMemo);
 
   finally
     S.Free;
@@ -60,10 +60,10 @@ begin
 end;
 
 //Вывод ошибок, если есть
-procedure StartFirstConnect.UpdateSDMemo;
+procedure StartFirstConnect.UpdateLogMemo;
 begin
-  MainForm.SDMemo.Lines.Assign(S);
-  MainForm.SDMemo.Refresh;
+  MainForm.LogMemo.Lines.Assign(S);
+  MainForm.LogMemo.Refresh;
 
   //Если в выводе нет 'error' - прочитать и вывести корень 's3://'
   if Pos('error', LowerCase(S.Text)) <> 0 then

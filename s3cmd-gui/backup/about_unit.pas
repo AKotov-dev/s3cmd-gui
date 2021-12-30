@@ -14,7 +14,7 @@ type
 
   TAboutForm = class(TForm)
     Bevel1: TBevel;
-    BitBtn1: TBitBtn;
+    OkBtn: TBitBtn;
     Image1: TImage;
     Label1: TLabel;
     Label2: TLabel;
@@ -44,7 +44,7 @@ procedure TAboutForm.FormShow(Sender: TObject);
 begin
   Label1.Caption := Application.Title;
   AboutForm.Width := Label2.Left + Label2.Width + 20;
-  AboutForm.Height := BitBtn1.Top + BitBtn1.Height + 8;
+  AboutForm.Height := OkBtn.Top + OkBtn.Height + 8;
 end;
 
 end.

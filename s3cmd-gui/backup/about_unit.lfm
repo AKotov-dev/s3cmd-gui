@@ -1,9 +1,9 @@
 object AboutForm: TAboutForm
-  Left = 361
+  Left = 364
   Height = 261
-  Top = 154
+  Top = 138
   Width = 442
-  ActiveControl = BitBtn1
+  ActiveControl = OkBtn
   Caption = 'About'
   ClientHeight = 261
   ClientWidth = 442
@@ -231,7 +231,7 @@ object AboutForm: TAboutForm
     BorderSpacing.Right = 8
     Shape = bsTopLine
   end
-  object BitBtn1: TBitBtn
+  object OkBtn: TBitBtn
     AnchorSideLeft.Control = Bevel1
     AnchorSideLeft.Side = asrCenter
     AnchorSideTop.Control = Bevel1

@@ -12,10 +12,10 @@ type
   { TACLForm }
 
   TACLForm = class(TForm)
-    BitBtn1: TBitBtn;
-    BitBtn2: TBitBtn;
+    OkBtn: TBitBtn;
+    CloseBtn: TBitBtn;
     RadioGroup1: TRadioGroup;
-    procedure BitBtn1Click(Sender: TObject);
+    procedure OkBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
   private
@@ -35,41 +35,39 @@ uses unit1;
 
 { TACLForm }
 
-procedure TACLForm.BitBtn1Click(Sender: TObject);
+//Публичный/Приватный (ACL)
+procedure TACLForm.OkBtnClick(Sender: TObject);
 var
   i: integer;
   c: string;
 begin
-  if MainForm.SDBox.SelCount <> 0 then
+  for i := 0 to MainForm.SDBox.Count - 1 do
   begin
-    for i := 0 to MainForm.SDBox.Count - 1 do
+    if MainForm.SDBox.Selected[i] then
     begin
-      if MainForm.SDBox.Selected[i] then
+      if RadioGroup1.ItemIndex = 0 then
       begin
-        if RadioGroup1.ItemIndex = 0 then
-        begin
-          if MainForm.GroupBox2.Caption <> 's3://' then
-            c := 's3cmd setacl --recursive "' + MainForm.GroupBox2.Caption +
-              MainForm.SDBox.Items[i] + '" --acl-public'
-          else
-            c := 's3cmd setacl ' + MainForm.SDBox.Items[i] + '/ --acl-public';
-
-          cmd := c + '; ' + cmd;
-        end
+        if MainForm.GroupBox2.Caption <> 's3://' then
+          c := 's3cmd setacl --recursive "' + MainForm.GroupBox2.Caption +
+            MainForm.SDBox.Items[i] + '" --acl-public'
         else
-        begin
-          if MainForm.GroupBox2.Caption <> 's3://' then
-            c := 's3cmd setacl --recursive "' + MainForm.GroupBox2.Caption +
-              MainForm.SDBox.Items[i] + '" --acl-private'
-          else
-            c := 's3cmd setacl ' + MainForm.SDBox.Items[i] + '/ --acl-private';
+          c := 's3cmd setacl ' + MainForm.SDBox.Items[i] + '/ --acl-public';
 
-          cmd := c + '; ' + cmd;
-        end;
+        cmd := c + '; ' + cmd;
+      end
+      else
+      begin
+        if MainForm.GroupBox2.Caption <> 's3://' then
+          c := 's3cmd setacl --recursive "' + MainForm.GroupBox2.Caption +
+            MainForm.SDBox.Items[i] + '" --acl-private'
+        else
+          c := 's3cmd setacl ' + MainForm.SDBox.Items[i] + '/ --acl-private';
+
+        cmd := c + '; ' + cmd;
       end;
     end;
-    MainForm.StartCmd;
   end;
+  MainForm.StartCmd;
 end;
 
 procedure TACLForm.FormCreate(Sender: TObject);
@@ -80,7 +78,7 @@ end;
 
 procedure TACLForm.FormShow(Sender: TObject);
 begin
-  ACLForm.Height := BitBtn1.Top + BitBtn1.Height + 8;
+  ACLForm.Height := OkBtn.Top + OkBtn.Height + 8;
 end;
 
 end.
