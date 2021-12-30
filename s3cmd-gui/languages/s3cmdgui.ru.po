@@ -139,7 +139,6 @@ msgid "Upper level"
 msgstr "Верхний уровень"
 
 #: tmainform.updatebtn.hint
-#, fuzzy
 msgctxt "tmainform.updatebtn.hint"
 msgid "Update"
 msgstr "Обновить"
@@ -188,4 +187,3 @@ msgstr "Приватный доступ [READ, recursive, --acl-private]"
 #: unit1.spublicaccess
 msgid "Public access [READ, recursive, --acl-public]"
 msgstr "Публичный доступ [READ, recursive, --acl-public]"
-
