@@ -364,7 +364,7 @@ begin
   left_panel := False;
 
   //Создаём новый бакет и показываем список бакетов 's3://'
-  MainForm.GroupBox2.Caption := 's3://';
+  MainForm.GroupBox2.Caption := 's3://' + Trim(S);
   MainForm.StartCmd;
 end;
 
@@ -522,7 +522,7 @@ begin
   MainForm.CheckConnect;
 end;
 
-//Создать каталог на компе
+//Создать каталог на компьютере
 procedure TMainForm.MkPCDirBtnClick(Sender: TObject);
 var
   S: string;
@@ -551,7 +551,7 @@ begin
   CompDirUpdate;
 end;
 
-//Перечитываем папку на компе
+//Перечитываем домашнюю папку на компьютере
 procedure TMainForm.UpdateBtnClick(Sender: TObject);
 begin
   with CompDir do
