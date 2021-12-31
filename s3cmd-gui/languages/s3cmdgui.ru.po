@@ -39,7 +39,7 @@ msgstr ""
 "Компиляция: Lazarus 2.0.10\n"
 "Автор: alex_q_2000 (C) 2021\n"
 "Благодарности: Michal Ludvig && Co (GitHub)\n"
-"Jani Välimaa, Lewis Smith (Команда Mageia Linux)\n"
+"Jani Välimaa, Lewis Smith (команда Mageia Linux)\n"
 "\n"
 "Russian Linux Forum: https://linuxforum.ru\n"
 
