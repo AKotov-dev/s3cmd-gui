@@ -78,7 +78,6 @@ end;
 //Окончание операции
 procedure StartLSFolder.HideProgress;
 begin
-  //Очищаем команду для корректного "Esc"
   Screen.cursor := crDefault;
 end;
 

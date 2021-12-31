@@ -1,13 +1,15 @@
 object AboutForm: TAboutForm
-  Left = 293
+  Left = 334
   Height = 261
-  Top = 126
+  Top = 154
   Width = 442
   ActiveControl = OkBtn
   Caption = 'About'
   ClientHeight = 261
   ClientWidth = 442
+  KeyPreview = True
   OnClose = FormClose
+  OnKeyUp = FormKeyUp
   OnShow = FormShow
   Position = poMainFormCenter
   LCLVersion = '2.0.10.0'

@@ -5,7 +5,8 @@ unit config_unit;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, Buttons, Process;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls,
+  Buttons, Process, LCLType;
 
 type
 
@@ -24,6 +25,7 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    procedure FormKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
     procedure OkBtnClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormShow(Sender: TObject);
@@ -67,6 +69,12 @@ begin
   finally
     S.Free;
   end;
+end;
+
+procedure TConfigForm.FormKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
+begin
+  if Key = VK_ESCAPE then
+    ConfigForm.Close;
 end;
 
 procedure TConfigForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);

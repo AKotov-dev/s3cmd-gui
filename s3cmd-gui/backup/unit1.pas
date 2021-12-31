@@ -148,11 +148,11 @@ begin
         break;
       end;
   end;
-
+  //Чтение текущей директории
   StartLS;
 end;
 
-//StartCommand
+//StartCommand (служебные команды)
 procedure TMainForm.StartProcess(command: string);
 var
   ExProcess: TProcess;
@@ -194,6 +194,7 @@ begin
   end;
 end;
 
+//Сменить директорию облака (s3://.../..)
 procedure TMainForm.SDBoxDblClick(Sender: TObject);
 begin
   if SDBox.Count <> 0 then
@@ -212,6 +213,7 @@ begin
   end;
 end;
 
+//Прорисовка иконок панели 's3://'
 procedure TMainForm.SDBoxDrawItem(Control: TWinControl; Index: integer;
   ARect: TRect; State: TOwnerDrawState);
 var
@@ -266,7 +268,7 @@ begin
   Node.SelectedIndex := Node.ImageIndex;
 end;
 
-//Копирование из облака на комп
+//Копирование из облака на компьютер
 procedure TMainForm.CopyFromBucketClick(Sender: TObject);
 var
   i: integer;
@@ -311,9 +313,9 @@ begin
   end;
 end;
 
+//Предупреждение о завершении обмена с облаком, если в прогрессе
 procedure TMainForm.FormCloseQuery(Sender: TObject; var CanClose: boolean);
 begin
-  //Предупреждение о завершении обмена с облаком, если в прогрессе
   if cmd <> '' then
     if MessageDlg(SCloseQuery, mtWarning, [mbYes, mbCancel], 0) <> mrYes then
       Canclose := False
@@ -332,7 +334,6 @@ begin
     //Если копирование выполняется - отменяем
     if cmd <> '' then
     begin
-      //    stop := True;
       StartProcess('killall s3cmd');
       LogMemo.Append('S3cmd-GUI: Esc - Cancellation of the operation...');
     end;
@@ -367,6 +368,7 @@ begin
   MainForm.StartCmd;
 end;
 
+//Публичный/Приватный объект(ы)
 procedure TMainForm.ACLBtnClick(Sender: TObject);
 begin
   if SDBox.SelCount <> 0 then
@@ -389,7 +391,7 @@ var
 begin
   //Флаг выбора панели
   left_panel := False;
-
+  //Сборка единой команды
   c := '';
   //Флаг совпадения имени
   e := False;
@@ -430,6 +432,7 @@ begin
   end;
 end;
 
+//Удаление объекта(ов)
 procedure TMainForm.DelBtnClick(Sender: TObject);
 var
   i: integer;
@@ -440,6 +443,7 @@ begin
 
   //Команда в поток
   cmd := '';
+  //Сборка команды
   c := '';
 
   //Флаг выбора панели
@@ -469,7 +473,7 @@ begin
     end;
   end
   else
-    //Удаление бакета!!!
+    //Удаление бакета и его незавершенных загрузок (очистка/удаление)
   begin
     if MessageDlg(SDelete, mtConfirmation, [mbYes, mbNo], 0) = mrYes then
     begin
@@ -510,6 +514,7 @@ begin
   MainForm.Caption := Application.Title;
   IniPropStorage1.Restore;
 
+  //Коррекция размеров при масштабировании в Plasma
   Panel3.Height := CopyFromPC.Height + 14;
   Panel4.Height := Panel3.Height;
 

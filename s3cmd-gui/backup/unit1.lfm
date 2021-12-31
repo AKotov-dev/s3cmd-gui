@@ -3,7 +3,7 @@ object MainForm: TMainForm
   Height = 694
   Top = 122
   Width = 1005
-  ActiveControl = Splitter2
+  ActiveControl = CompDir
   Caption = 'S3cmd-GUI'
   ClientHeight = 694
   ClientWidth = 1005

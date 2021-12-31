@@ -6,7 +6,7 @@ interface
 
 uses
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, StdCtrls,
-  Buttons;
+  Buttons, LCLType;
 
 type
 
@@ -19,6 +19,7 @@ type
     Label1: TLabel;
     Label2: TLabel;
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
+    procedure FormKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
     procedure FormShow(Sender: TObject);
   private
 
@@ -38,6 +39,12 @@ implementation
 procedure TAboutForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);
 begin
   CloseAction := caFree;
+end;
+
+procedure TAboutForm.FormKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
+begin
+  if key = VK_ESCAPE then
+    AboutForm.Close;
 end;
 
 procedure TAboutForm.FormShow(Sender: TObject);

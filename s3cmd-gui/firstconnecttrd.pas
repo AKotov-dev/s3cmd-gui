@@ -18,7 +18,7 @@ type
 
     procedure Execute; override;
 
-    //Выводим лог
+    //Выводим лог ошибок
     procedure UpdateLogMemo;
 
   end;
@@ -30,7 +30,7 @@ uses unit1;
 
 { TRD }
 
-//Пробный s3cmd ls
+//Пробный 's3cmd ls'
 procedure StartFirstConnect.Execute;
 var
   ExProcess: TProcess;

@@ -7,7 +7,9 @@ object ConfigForm: TConfigForm
   Caption = 'Configuration'
   ClientHeight = 249
   ClientWidth = 548
+  KeyPreview = True
   OnClose = FormClose
+  OnKeyUp = FormKeyUp
   OnShow = FormShow
   Position = poMainFormCenter
   LCLVersion = '2.0.10.0'

@@ -3,10 +3,13 @@ object ACLForm: TACLForm
   Height = 146
   Top = 126
   Width = 442
+  ActiveControl = OkBtn
   Caption = 'ACL'
   ClientHeight = 146
   ClientWidth = 442
+  KeyPreview = True
   OnCreate = FormCreate
+  OnKeyUp = FormKeyUp
   OnShow = FormShow
   Position = poMainFormCenter
   LCLVersion = '2.0.10.0'

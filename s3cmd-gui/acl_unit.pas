@@ -5,7 +5,7 @@ unit acl_unit;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, Buttons;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, ExtCtrls, Buttons, LCLType;
 
 type
 
@@ -15,6 +15,7 @@ type
     OkBtn: TBitBtn;
     CloseBtn: TBitBtn;
     RadioGroup1: TRadioGroup;
+    procedure FormKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
     procedure OkBtnClick(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
@@ -68,6 +69,12 @@ begin
     end;
   end;
   MainForm.StartCmd;
+end;
+
+procedure TACLForm.FormKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
+begin
+  if Key = VK_ESCAPE then
+    ACLForm.Close;
 end;
 
 procedure TACLForm.FormCreate(Sender: TObject);
