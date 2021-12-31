@@ -1766,6 +1766,9 @@ object MainForm: TMainForm
       BorderStyle = bsNone
       Font.Height = -12
       Font.Name = 'Monospace'
+      Lines.Strings = (
+        'waiting for a connection to the cloud...'
+      )
       ParentFont = False
       ScrollBars = ssVertical
       TabOrder = 0

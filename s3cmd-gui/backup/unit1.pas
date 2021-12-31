@@ -364,7 +364,7 @@ begin
   left_panel := False;
 
   //Создаём новый бакет и показываем список бакетов 's3://'
-  MainForm.GroupBox2.Caption := 's3://' + Trim(S);
+  MainForm.GroupBox2.Caption := 's3://';
   MainForm.StartCmd;
 end;
 
