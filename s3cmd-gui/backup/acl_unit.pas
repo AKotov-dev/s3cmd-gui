@@ -35,7 +35,7 @@ uses unit1;
 
 { TACLForm }
 
-//Приватный/Публичный (ACL)
+//Публичный/Приватный (ACL)
 procedure TACLForm.OkBtnClick(Sender: TObject);
 var
   i: integer;

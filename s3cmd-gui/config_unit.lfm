@@ -3,6 +3,7 @@ object ConfigForm: TConfigForm
   Height = 249
   Top = 124
   Width = 548
+  ActiveControl = Edit1
   Caption = 'Configuration'
   ClientHeight = 249
   ClientWidth = 548

@@ -62,7 +62,7 @@ begin
 
     S.SaveToFile(GetUserDir + '.s3cfg');
 
-    //Проверяем подключение выводим ошибки в SDMemo
+    //Проверяем подключение выводим ошибки в LogMemo
     MainForm.CheckConnect;
   finally
     S.Free;

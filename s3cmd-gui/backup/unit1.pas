@@ -177,18 +177,20 @@ var
 begin
   try
     //Запоминаем позицию курсора
-    i := CompDir.Selected.Index;// .AbsoluteIndex;
+    i := CompDir.Selected.AbsoluteIndex;
     d := ExtractFilePath(CompDir.GetPathFromNode(CompDir.Selected));
 
     //Обновляем  выбранного родителя
     with CompDir do
       Refresh(Selected.Parent);
 
-    //Возвращаем курсор на исходную
+    //Курсор на созданную папку
     CompDir.Path := d;
     CompDir.Select(CompDir.Items[i]);
     CompDir.SetFocus;
   except;
+    //Если сбой - перечитать корень
+    UpdateBtn.Click;
   end;
 end;
 
@@ -292,8 +294,9 @@ begin
             e := True;
 
         c := 's3cmd get --progress --recursive --force ' + '''' +
-          ExcludeTrailingPathDelimiter(GroupBox2.Caption + SDBox.Items[i]) + '''' + ' ' + '''' +
-          ExtractFilePath(CompDir.GetPathFromNode(CompDir.Selected)) + '''';
+          ExcludeTrailingPathDelimiter(GroupBox2.Caption + SDBox.Items[i]) +
+          '''' + ' ' + '''' + ExtractFilePath(CompDir.GetPathFromNode(
+          CompDir.Selected)) + '''';
 
         cmd := c + '; ' + cmd;
       end;

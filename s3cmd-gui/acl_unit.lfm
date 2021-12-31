@@ -1,7 +1,7 @@
 object ACLForm: TACLForm
-  Left = 313
+  Left = 305
   Height = 146
-  Top = 125
+  Top = 126
   Width = 442
   Caption = 'ACL'
   ClientHeight = 146

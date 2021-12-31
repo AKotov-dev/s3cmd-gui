@@ -1,11 +1,11 @@
 object MainForm: TMainForm
-  Left = 294
-  Height = 683
-  Top = 124
+  Left = 287
+  Height = 694
+  Top = 122
   Width = 1005
   ActiveControl = Splitter2
   Caption = 'S3cmd-GUI'
-  ClientHeight = 683
+  ClientHeight = 694
   ClientWidth = 1005
   KeyPreview = True
   OnCloseQuery = FormCloseQuery
@@ -25,13 +25,13 @@ object MainForm: TMainForm
   end
   object GroupBox1: TGroupBox
     Left = 0
-    Height = 597
+    Height = 608
     Top = 5
     Width = 500
     Align = alLeft
     BorderSpacing.Top = 5
     Caption = 'computer'
-    ClientHeight = 579
+    ClientHeight = 590
     ClientWidth = 498
     Font.Height = -13
     Font.Name = 'Sans'
@@ -40,7 +40,7 @@ object MainForm: TMainForm
     TabOrder = 1
     object CompDir: TShellTreeView
       Left = 0
-      Height = 523
+      Height = 534
       Top = 56
       Width = 498
       Align = alClient
@@ -519,13 +519,13 @@ object MainForm: TMainForm
   end
   object GroupBox2: TGroupBox
     Left = 505
-    Height = 597
+    Height = 608
     Top = 5
     Width = 500
     Align = alClient
     BorderSpacing.Top = 5
     Caption = 's3://'
-    ClientHeight = 579
+    ClientHeight = 590
     ClientWidth = 498
     Font.Height = -13
     Font.Name = 'Sans'
@@ -534,7 +534,7 @@ object MainForm: TMainForm
     TabOrder = 2
     object SDBox: TListBox
       Left = 0
-      Height = 523
+      Height = 534
       Top = 56
       Width = 498
       Align = alClient
@@ -1737,7 +1737,7 @@ object MainForm: TMainForm
   end
   object Splitter2: TSplitter
     Left = 500
-    Height = 602
+    Height = 613
     Top = 0
     Width = 5
   end
@@ -1747,7 +1747,7 @@ object MainForm: TMainForm
     AnchorSideBottom.Control = Owner
     Left = 0
     Height = 76
-    Top = 607
+    Top = 618
     Width = 1005
     Align = alBottom
     BevelOuter = bvNone
@@ -1787,7 +1787,7 @@ object MainForm: TMainForm
     Cursor = crVSplit
     Left = 0
     Height = 5
-    Top = 602
+    Top = 613
     Width = 1005
     Align = alBottom
     ResizeAnchor = akBottom
