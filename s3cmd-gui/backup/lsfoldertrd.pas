@@ -31,7 +31,7 @@ uses unit1;
 
 { TRD }
 
-//Апдейт текущего каталога SDBox
+//Апдейт текущего каталога в 's3://..'
 procedure StartLSFolder.Execute;
 var
   ExProcess: TProcess;
@@ -49,9 +49,9 @@ begin
 
     //Ошибки не выводим, только список, ждём окончания потока
     ExProcess.Options := [poWaitOnExit, poUsePipes];
-    //ls текущего каталога с заменой спецсимволов
+    //ls текущего каталога
     if MainForm.GroupBox2.Caption = 's3://' then
-      ExProcess.Parameters.Add('s3cmd ls | cut -d " " -f4')
+      ExProcess.Parameters.Add('s3cmd ls | cut -b24- | awk ' + '''' + '{ print $0"/" }' + '''')
     else
       ExProcess.Parameters.Add('s3cmd ls ' + MainForm.GroupBox2.Caption +
         ' | cut -b' + IntToStr(Length(MainForm.GroupBox2.Caption) + 32) +
@@ -81,7 +81,7 @@ begin
   Screen.cursor := crDefault;
 end;
 
-{ БЛОК ВЫВОДА LS в SDBox }
+{ БЛОК ВЫВОДА ls в SDBox }
 procedure StartLSFolder.UpdateSDBox;
 begin
   with MainForm do

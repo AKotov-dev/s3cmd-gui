@@ -199,9 +199,6 @@ procedure TMainForm.SDBoxDblClick(Sender: TObject);
 begin
   if SDBox.Count <> 0 then
   begin
-    if GroupBox2.Caption = 's3://' then
-      GroupBox2.Caption := ' ';
-
     if (Pos('//', SDBox.Items.Strings[SDBox.ItemIndex]) <> 0) or
       (Copy(SDBox.Items.Strings[SDBox.ItemIndex],
       Length(SDBox.Items.Strings[SDBox.ItemIndex]), 1) = '/') then
@@ -228,8 +225,7 @@ begin
       Canvas.FillRect(aRect);
       //Вывод текста со сдвигом (общий)
       //Сверху иконки взависимости от последнего символа ('/')
-      if (Pos('//', Items[Index]) <> 0) or
-        (Copy(Items[Index], Length(Items[Index]), 1) = '/') then
+      if Copy(Items[Index], Length(Items[Index]), 1) = '/' then
       begin
         //Имя папки
         Canvas.TextOut(aRect.Left + 27, aRect.Top + 5, Items[Index]);
@@ -477,15 +473,15 @@ begin
   begin
     if MessageDlg(SDelete, mtConfirmation, [mbYes, mbNo], 0) = mrYes then
     begin
-      cmd := 's3cmd multipart ' + SDBox.Items.Strings[SDBox.ItemIndex] +
+      cmd := 's3cmd multipart s3://' + SDBox.Items[SDBox.ItemIndex] +
         ' | grep ^[[:digit:]] | cut -f2 | awk ' + '''' + '{print "\""$0"\""}' +
-        '''' + ' > ~/.s3cmd-gui/222;' + 's3cmd multipart ' +
-        SDBox.Items.Strings[SDBox.ItemIndex] +
+        '''' + ' > ~/.s3cmd-gui/222;' + 's3cmd multipart s3://' +
+        SDBox.Items[SDBox.ItemIndex] +
         ' | grep ^[[:digit:]] | cut -f3 > ~/.s3cmd-gui/333;' +
         'echo -e "#!/bin/bash\n" > ~/.s3cmd-gui/444;' +
         'paste ~/.s3cmd-gui/222 ~/.s3cmd-gui/333 >> ~/.s3cmd-gui/444;' +
         'sed -i "/s3/s/^/s3cmd abortmp /" ~/.s3cmd-gui/444; chmod +x ~/.s3cmd-gui/444; sh ~/.s3cmd-gui/444;'
-        + 's3cmd rb --recursive --force ' + SDBox.Items.Strings[SDBox.ItemIndex];
+        + 's3cmd rb --recursive --force s3://' + SDBox.Items[SDBox.ItemIndex];
 
       StartCmd;
     end;

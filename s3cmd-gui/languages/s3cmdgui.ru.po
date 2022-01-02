@@ -23,7 +23,7 @@ msgstr ""
 
 #: taboutform.label2.caption
 msgid ""
-"GUI for Command Line S3 Client\n"
+"GUI for Command Line Client S3cmd\n"
 "\n"
 "License: GPLv3\n"
 "Compilation: Lazarus 2.0.10\n"
@@ -33,7 +33,7 @@ msgid ""
 "\n"
 "Russian Linux Forum: https://linuxforum.ru\n"
 msgstr ""
-"GUI для консольного клиента S3\n"
+"GUI для консольного клиента S3cmd\n"
 "\n"
 "Лицензия: GPLv3\n"
 "Компиляция: Lazarus 2.0.10\n"
@@ -126,7 +126,9 @@ msgid "Panel2"
 msgstr ""
 
 #: tmainform.selectallbtn.hint
-msgid "Select all (not buckets)"
+#, fuzzy
+#| msgid "Select all (not buckets)"
+msgid "Select all (except buckets)"
 msgstr "Выбрать все (не бакеты)"
 
 #: tmainform.settingsbtn.hint
@@ -187,3 +189,4 @@ msgstr "Приватный доступ [READ, recursive, --acl-private]"
 #: unit1.spublicaccess
 msgid "Public access [READ, recursive, --acl-public]"
 msgstr "Публичный доступ [READ, recursive, --acl-public]"
+

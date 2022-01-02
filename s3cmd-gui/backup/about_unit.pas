@@ -44,7 +44,7 @@ end;
 procedure TAboutForm.FormKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
 begin
   if key = VK_ESCAPE then
-    Close;
+    AboutForm.Close;
 end;
 
 procedure TAboutForm.FormShow(Sender: TObject);

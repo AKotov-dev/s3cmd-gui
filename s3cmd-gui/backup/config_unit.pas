@@ -74,7 +74,7 @@ end;
 procedure TConfigForm.FormKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
 begin
   if Key = VK_ESCAPE then
-    Close;
+    ConfigForm.Close;
 end;
 
 procedure TConfigForm.FormClose(Sender: TObject; var CloseAction: TCloseAction);

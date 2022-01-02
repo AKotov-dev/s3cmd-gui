@@ -715,7 +715,7 @@ object MainForm: TMainForm
         AnchorSideTop.Control = Panel3
         Left = 96
         Height = 40
-        Hint = 'Select all (not buckets)'
+        Hint = 'Select all (except buckets)'
         Top = 8
         Width = 40
         BorderSpacing.Top = 8
@@ -1770,6 +1770,7 @@ object MainForm: TMainForm
         'S3cmd-GUI: Waiting for a connection to the cloud...'
       )
       ParentFont = False
+      ReadOnly = True
       ScrollBars = ssVertical
       TabOrder = 0
       WantReturns = False

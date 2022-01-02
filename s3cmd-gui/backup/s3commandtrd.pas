@@ -5,7 +5,7 @@ unit S3CommandTRD;
 interface
 
 uses
-  Classes, Process, SysUtils;
+  Classes, Process, SysUtils, ComCtrls;
 
 type
   StartS3Command = class(TThread)
@@ -83,11 +83,14 @@ begin
     LogMemo.Clear;
 
     //Запрещаем параллельное копирование
-    CopyFromPC.Enabled := False;
+    {CopyFromPC.Enabled := False;
     CopyFromBucket.Enabled := False;
     DelBtn.Enabled := False;
     AddBtn.Enabled := False;
     ACLBtn.Enabled := False;
+    SettingsBtn.Enabled := False;}
+    Panel4.Enabled := False;
+    Panel3.Enabled := False;
 
     //Метка отмены копирования
     Panel4.Caption := SCancelCopyng;
@@ -107,11 +110,14 @@ begin
     ProgressBar1.Refresh;
 
     //Разрешаем копирование
-    CopyFromPC.Enabled := True;
+    {CopyFromPC.Enabled := True;
     CopyFromBucket.Enabled := True;
     DelBtn.Enabled := True;
     AddBtn.Enabled := True;
     ACLBtn.Enabled := True;
+    SettingsBtn.Enabled := True;}
+    Panel4.Enabled := True;
+    Panel3.Enabled := True;
 
     //Обновление каталогов назначения (выборочно)
     if left_panel then

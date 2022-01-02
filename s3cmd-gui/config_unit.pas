@@ -65,6 +65,7 @@ begin
     S.SaveToFile(GetUserDir + '.s3cfg');
 
     //Проверяем подключение выводим ошибки в LogMemo
+    MainForm.StartProcess('killall s3cmd');
     MainForm.CheckConnect;
   finally
     S.Free;

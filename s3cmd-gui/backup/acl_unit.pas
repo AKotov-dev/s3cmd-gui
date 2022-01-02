@@ -52,7 +52,7 @@ begin
           c := 's3cmd setacl --recursive "' + MainForm.GroupBox2.Caption +
             MainForm.SDBox.Items[i] + '" --acl-public'
         else
-          c := 's3cmd setacl ' + MainForm.SDBox.Items[i] + '/ --acl-public';
+          c := 's3cmd setacl s3://' + MainForm.SDBox.Items[i] + '/ --acl-public';
 
         cmd := c + '; ' + cmd;
       end
@@ -74,7 +74,7 @@ end;
 procedure TACLForm.FormKeyUp(Sender: TObject; var Key: word; Shift: TShiftState);
 begin
   if Key = VK_ESCAPE then
-    Close;
+    ACLForm.Close;
 end;
 
 procedure TACLForm.FormCreate(Sender: TObject);
