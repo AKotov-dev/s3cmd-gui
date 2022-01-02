@@ -52,7 +52,7 @@ begin
           c := 's3cmd setacl --recursive "' + MainForm.GroupBox2.Caption +
             MainForm.SDBox.Items[i] + '" --acl-public'
         else
-          c := 's3cmd setacl s3://' + MainForm.SDBox.Items[i] + '/ --acl-public';
+          c := 's3cmd setacl s3://' + MainForm.SDBox.Items[i] + ' --acl-public';
 
         cmd := c + '; ' + cmd;
       end
@@ -62,7 +62,7 @@ begin
           c := 's3cmd setacl --recursive "' + MainForm.GroupBox2.Caption +
             MainForm.SDBox.Items[i] + '" --acl-private'
         else
-          c := 's3cmd setacl ' + MainForm.SDBox.Items[i] + '/ --acl-private';
+          c := 's3cmd setacl s3://' + MainForm.SDBox.Items[i] + '/ --acl-private';
 
         cmd := c + '; ' + cmd;
       end;
