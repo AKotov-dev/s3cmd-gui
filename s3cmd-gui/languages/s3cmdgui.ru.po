@@ -126,10 +126,8 @@ msgid "Panel2"
 msgstr ""
 
 #: tmainform.selectallbtn.hint
-#, fuzzy
-#| msgid "Select all (not buckets)"
 msgid "Select all (except buckets)"
-msgstr "Выбрать все (не бакеты)"
+msgstr "Выбрать все (кроме бакетов)"
 
 #: tmainform.settingsbtn.hint
 msgctxt "tmainform.settingsbtn.hint"
@@ -189,4 +187,3 @@ msgstr "Приватный доступ [READ, recursive, --acl-private]"
 #: unit1.spublicaccess
 msgid "Public access [READ, recursive, --acl-public]"
 msgstr "Публичный доступ [READ, recursive, --acl-public]"
-
