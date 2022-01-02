@@ -125,17 +125,6 @@ begin
   //Вывод построчно
   for i := 0 to Log.Count - 1 do
     MainForm.LogMemo.Lines.Append(Log[i]);
-
-  //Если Esc - завершение/выход
- { if stop then
-  begin
-    stop := False;
-    MainForm.StartProcess('killall s3cmd');
-    MainForm.SDMemo.Append('s3cmd-gui: cancel operation...');
-  end;}
-
-  //Вывод пачками
-  //  MainForm.SDMemo.Lines.Assign(Result);
 end;
 
 end.

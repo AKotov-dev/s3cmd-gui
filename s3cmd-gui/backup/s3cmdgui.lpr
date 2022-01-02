@@ -9,13 +9,14 @@ uses {$IFDEF UNIX}
   Unit1,
   config_unit,
   about_unit,
-  FirstConnectTRD, acl_unit { you can add units after this };
+  FirstConnectTRD,
+  acl_unit { you can add units after this };
 
 {$R *.res}
 
 begin
   RequireDerivedFormResource := True;
-  Application.Title:='S3cmd-GUI v0.5';
+  Application.Title:='S3cmd-GUI v1.1';
   Application.Scaled := True;
   Application.Initialize;
   Application.CreateForm(TMainForm, MainForm);

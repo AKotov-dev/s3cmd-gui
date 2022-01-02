@@ -83,12 +83,6 @@ begin
     LogMemo.Clear;
 
     //Запрещаем параллельное копирование
-    {CopyFromPC.Enabled := False;
-    CopyFromBucket.Enabled := False;
-    DelBtn.Enabled := False;
-    AddBtn.Enabled := False;
-    ACLBtn.Enabled := False;
-    SettingsBtn.Enabled := False;}
     Panel4.Enabled := False;
     Panel3.Enabled := False;
 
@@ -110,12 +104,6 @@ begin
     ProgressBar1.Refresh;
 
     //Разрешаем копирование
-    {CopyFromPC.Enabled := True;
-    CopyFromBucket.Enabled := True;
-    DelBtn.Enabled := True;
-    AddBtn.Enabled := True;
-    ACLBtn.Enabled := True;
-    SettingsBtn.Enabled := True;}
     Panel4.Enabled := True;
     Panel3.Enabled := True;
 

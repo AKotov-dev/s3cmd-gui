@@ -434,8 +434,10 @@ var
   i: integer;
   c: string; //сборка команд...
 begin
-  if SDBox.Count = 0 then
-    Exit;
+  //Удаление файлов и папок
+  if (SDBox.SelCount = 0) or (MessageDlg(SDelete, mtConfirmation, [mbYes, mbNo], 0) <>
+    mrYes) then
+    exit;
 
   //Команда в поток
   cmd := '';
@@ -447,44 +449,36 @@ begin
 
   if GroupBox2.Caption <> 's3://' then
   begin
-    //Удаление файлов и папок
-    if (SDBox.SelCount <> 0) and
-      (MessageDlg(SDelete, mtConfirmation, [mbYes, mbNo], 0) = mrYes) then
+    for i := 0 to SDBox.Count - 1 do
     begin
-      for i := 0 to SDBox.Count - 1 do
+      if SDBox.Selected[i] then
       begin
-        if SDBox.Selected[i] then
-        begin
-          if Pos('/', SDBox.Items[i]) <> 0 then
-            c := 's3cmd --recursive --force del ' + '''' + GroupBox2.Caption +
-              SDBox.Items[i] + ''''
-          else
-            c := 's3cmd rm --force ' + '''' + GroupBox2.Caption +
-              SDBox.Items[i] + '''';
-          //Собираем команду
-          cmd := c + '; ' + cmd;
-        end;
+        if Pos('/', SDBox.Items[i]) <> 0 then
+          c := 's3cmd --recursive --force del ' + '''' + GroupBox2.Caption +
+            SDBox.Items[i] + ''''
+        else
+          c := 's3cmd rm --force ' + '''' + GroupBox2.Caption +
+            SDBox.Items[i] + '''';
+        //Собираем команду
+        cmd := c + '; ' + cmd;
       end;
-      StartCmd;
     end;
+    StartCmd;
   end
   else
     //Удаление бакета и его незавершенных загрузок (очистка/удаление)
   begin
-    if MessageDlg(SDelete, mtConfirmation, [mbYes, mbNo], 0) = mrYes then
-    begin
-      cmd := 's3cmd multipart s3://' + SDBox.Items[SDBox.ItemIndex] +
-        ' | grep ^[[:digit:]] | cut -f2 | awk ' + '''' + '{print "\""$0"\""}' +
-        '''' + ' > ~/.s3cmd-gui/222;' + 's3cmd multipart s3://' +
-        SDBox.Items[SDBox.ItemIndex] +
-        ' | grep ^[[:digit:]] | cut -f3 > ~/.s3cmd-gui/333;' +
-        'echo -e "#!/bin/bash\n" > ~/.s3cmd-gui/444;' +
-        'paste ~/.s3cmd-gui/222 ~/.s3cmd-gui/333 >> ~/.s3cmd-gui/444;' +
-        'sed -i "/s3/s/^/s3cmd abortmp /" ~/.s3cmd-gui/444; chmod +x ~/.s3cmd-gui/444; sh ~/.s3cmd-gui/444;'
-        + 's3cmd rb --recursive --force s3://' + SDBox.Items[SDBox.ItemIndex];
+    cmd := 's3cmd multipart s3://' + SDBox.Items[SDBox.ItemIndex] +
+      ' | grep ^[[:digit:]] | cut -f2 | awk ' + '''' + '{print "\""$0"\""}' +
+      '''' + ' > ~/.s3cmd-gui/222;' + 's3cmd multipart s3://' +
+      SDBox.Items[SDBox.ItemIndex] +
+      ' | grep ^[[:digit:]] | cut -f3 > ~/.s3cmd-gui/333;' +
+      'echo -e "#!/bin/bash\n" > ~/.s3cmd-gui/444;' +
+      'paste ~/.s3cmd-gui/222 ~/.s3cmd-gui/333 >> ~/.s3cmd-gui/444;' +
+      'sed -i "/s3/s/^/s3cmd abortmp /" ~/.s3cmd-gui/444; chmod +x ~/.s3cmd-gui/444; sh ~/.s3cmd-gui/444;'
+      + 's3cmd rb --recursive --force s3://' + SDBox.Items[SDBox.ItemIndex];
 
-      StartCmd;
-    end;
+    StartCmd;
   end;
 
 end;
